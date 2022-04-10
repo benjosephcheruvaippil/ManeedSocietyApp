@@ -1,0 +1,1 @@
+web: gunicorn maneedsocietyapp.wsgi --log-file -
