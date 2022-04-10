@@ -13,7 +13,7 @@ def home_view(request):
         filename=request.FILES["file"]
         print("filename",filename)
         document=FilesUpload.objects.create(file=filename)
-        document.save()
+        document.save()  #saves the file to media directory
 
         # reading from excel
         path="..\\maneedsocietyapp\\media\\%s" %(filename)
