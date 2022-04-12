@@ -16,10 +16,16 @@ def home_view(request):
         document=FilesUpload.objects.create(file=filename)
         document.save()  #saves the file to media directory
 
+
+        filename = "home-style.css"
         # reading from excel
         # path="..\\maneedsocietyapp\\media\\%s" %(filename)
         path=os.path.join(settings.BASE_DIR,'staticfiles/%s' %(filename))
-        print("path",path)
+        if path:
+            print("path",path)
+        else:
+            print("not found")
+        
         
         wb_obj=openpyxl.load_workbook(path)
         sheet_obj = wb_obj.active
