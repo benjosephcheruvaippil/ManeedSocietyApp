@@ -2,6 +2,7 @@ import shutil
 from django.shortcuts import render,HttpResponse
 from django.http import HttpResponse
 from .models import FilesUpload
+from django.conf import settings
 import openpyxl
 import os
 
@@ -17,7 +18,8 @@ def home_view(request):
 
         # reading from excel
         # path="..\\maneedsocietyapp\\media\\%s" %(filename)
-        path="..\\maneedsocietyapp\\staticfiles\\%s" %(filename)
+        path=os.path.join(settings.BASE_DIR,'staticfiles\\%s' %(filename))
+        print("path",path)
         
         wb_obj=openpyxl.load_workbook(path)
         sheet_obj = wb_obj.active
