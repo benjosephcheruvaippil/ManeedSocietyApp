@@ -20,7 +20,7 @@ def home_view(request):
         # filename = "home-style.css"
         # reading from excel
         # path="..\\maneedsocietyapp\\media\\%s" %(filename)
-        path=os.path.join(settings.BASE_DIR,'staticfiles/%s' %(filename))
+        path=os.path.join(settings.BASE_DIR,'media/%s' %(filename))
         if path:
             print("path",path)
         else:
