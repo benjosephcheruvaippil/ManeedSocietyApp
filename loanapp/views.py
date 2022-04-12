@@ -17,7 +17,7 @@ def home_view(request):
         document.save()  #saves the file to media directory
 
 
-        filename = "home-style.css"
+        # filename = "home-style.css"
         # reading from excel
         # path="..\\maneedsocietyapp\\media\\%s" %(filename)
         path=os.path.join(settings.BASE_DIR,'staticfiles/%s' %(filename))
