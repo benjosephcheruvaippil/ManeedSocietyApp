@@ -11,6 +11,7 @@ import os
 def home_view(request):
     if request.method=="POST":
         # shutil.rmtree("..\\maneedsocietyapp\\media") #removes the directory media and all the files in it.
+        shutil.rmtree(os.path.join(settings.BASE_DIR,'media')) #removes the directory media and all the files in it.
         filename=request.FILES["file"]
         print("filename",filename)
         document=FilesUpload.objects.create(file=filename)
