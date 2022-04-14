@@ -29,8 +29,13 @@
 </div>
 
 <div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <h3>Loan Agreement</h3>
+  <p>Click here to download the loan agreement</p> 
+  <form action="{% url 'view-pdf' %}" method="get">
+    {% csrf_token %}
+    <p><input type="submit"</p>
+  </form>
+  
 </div>
 
 <div id="Tokyo" class="tabcontent">

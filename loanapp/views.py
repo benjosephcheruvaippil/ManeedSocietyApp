@@ -5,6 +5,10 @@ from .models import FilesUpload,CarDetail
 from django.conf import settings
 import openpyxl
 import os
+from xhtml2pdf import pisa
+from io import BytesIO
+from django.template.loader import get_template
+from django.views import View
 
 
 # Create your views here.
@@ -47,3 +51,37 @@ def home_view(request):
 
         return render(request,"loan-agreement.html")
     return render(request,"home-view.html")
+
+loan_data={
+"first":"just testing",
+"second":"last word"
+}
+
+class ViewPDF(View):
+    def get(self,request,*args,**kwargs):
+        pdf=render_to_pdf("loan-agreement.html",loan_data)
+        return HttpResponse(pdf,content_type='application/pdf')
+        # return HttpResponse({"done"})
+
+def render_to_pdf(template_src,context_dict={}):
+    template=get_template(template_src)
+    html=template.render(context_dict)
+    result=BytesIO()
+    pdf=pisa.pisaDocument(BytesIO(html.encode("UTF-8")),result)
+    # pdf=pisa.CreatePDF(html,result,link_callback="",encoding='UTF-8')
+    if not pdf.err:
+        return HttpResponse(result.getvalue(),content_type='application/pdf')
+    return None
+
+def DownloadHTMLToPDF(request):
+    pdf=render_to_pdf("loan-agreement.html",loan_data)
+    response=HttpResponse(pdf,content_type='application/pdf')
+    filename="LoanAgreement_%s.pdf" %("00001")
+    content="attachment; filename=%s" %(filename)
+    response['Content-Disposition']=content
+    return response
+
+def RenderHTML(request):
+    template=get_template("loan-agreement.html")
+    html=template.render(loan_data)
+    return HttpResponse(html)
