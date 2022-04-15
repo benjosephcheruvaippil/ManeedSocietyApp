@@ -31,8 +31,13 @@
 <div id="Paris" class="tabcontent">
   <h3>Loan Agreement</h3>
   <p>Click here to download the loan agreement</p> 
-  <form action="{% url 'view-pdf' %}" method="get">
+  <form action="{% url 'render-loan-agreement' %}" method="post">
     {% csrf_token %}
+    <p><input type="text" name="txtVaypa" placeholder="വായ്പ നമ്പർ"></p>
+    <p><input type="text" name="txtThuka" placeholder="വായ്പത്തുക"></p>
+    <p><input type="text" name="txtJamyam1" placeholder="Jamyam1"></p>
+    <p><input type="text" name="txtJamyam2" placeholder="Jamyam2"></p>
+    <p><input type="text" name="txtJamyam3" placeholder="Jamyam3"></p>
     <p><input type="submit"</p>
   </form>
   
