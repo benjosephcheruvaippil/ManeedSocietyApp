@@ -5,22 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" href="{% static 'home-style.css' %}">
-<!-- {% load static %} -->
 <script src="{% static 'home-script.js' %}"></script>
 </head>
 <body>
 
-<h2>Tabs</h2>
-<p>Click on the buttons inside the tabbed menu:</p>
+<h2>Maneed Cooperative Society</h2>
+<!-- <p>Click on the buttons inside the tabbed menu:</p> -->
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Upload Member Data</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Loan Document</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Chitty Document</button>
+  <button class="tablinks" id="btnUpload" onclick="openCity(event, 'Upload')">Upload Member Data</button>
+  <button class="tablinks" onclick="openCity(event, 'LoanDoc')">Loan Document</button>
+  <button class="tablinks" onclick="openCity(event, 'ChittyDoc')">Chitty Document</button>
 </div>
 
-<div id="London" class="tabcontent">
-  <h3>London</h3>
+<div id="Upload" class="tabcontent">
+  <h3>Upload Excel File</h3>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <p><input type="file" id="myFile" name="file"></p>
@@ -28,7 +27,7 @@
   </form>
 </div>
 
-<div id="Paris" class="tabcontent">
+<div id="LoanDoc" class="tabcontent">
   <h3>Loan Agreement</h3>
   <p>Click here to download the loan agreement</p> 
   <form action="{% url 'render-loan-agreement' %}" method="post">
@@ -38,17 +37,21 @@
     <p><input type="text" name="txtJamyam1" placeholder="Jamyam1"></p>
     <p><input type="text" name="txtJamyam2" placeholder="Jamyam2"></p>
     <p><input type="text" name="txtJamyam3" placeholder="Jamyam3"></p>
-    <p><input type="submit"</p>
+    <p><input type="submit" value="Generate PDF"></p>
   </form>
   
 </div>
 
-<div id="Tokyo" class="tabcontent">
+<div id="ChittyDoc" class="tabcontent">
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
 
 <script>
+$(document).ready(function(){
+  document.getElementById('btnUpload').click();
+});
+
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -61,6 +64,7 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+  
 }
 </script>
    

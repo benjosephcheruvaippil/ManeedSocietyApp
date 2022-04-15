@@ -80,8 +80,8 @@ def home_view(request):
 def RenderHTML(request):
     print(request.POST.get('txtVaypa'))
     loan_data={
-        "vaypanumber":request.POST.get('txtVaypa') if request.POST.get('txtVaypa')!="" else "--------------" ,
-        "thuka":request.POST.get('txtThuka'),
+        "vaypanumber":request.POST.get('txtVaypa') if request.POST.get('txtVaypa')!="" else "" ,
+        "thuka":request.POST.get('txtThuka') if request.POST.get('txtThuka')!="" else "",
         "jamyam1":request.POST.get('txtJamyam1'),
         "jamyam2":request.POST.get('txtJamyam2'),
         "jamyam3":request.POST.get('txtJamyam3')
