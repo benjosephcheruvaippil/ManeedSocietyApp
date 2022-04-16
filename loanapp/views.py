@@ -10,11 +10,12 @@ from xhtml2pdf import pisa
 from io import BytesIO
 from django.template.loader import get_template
 from django.views import View
+from django.core.exceptions import PermissionDenied
 from loanapp.decorators import check_session
 
 
 # Create your views here.
-@check_session(request)
+@check_session
 def home_view(request):
     if request.method=="POST":
         # shutil.rmtree("..\\maneedsocietyapp\\media") #removes the directory media and all the files in it.
@@ -55,6 +56,11 @@ def home_view(request):
         return render(request,"loan-agreement.html")
     session=request.session
     return render(request,"home-view.html")
+    # if request.session.has_key('username'):
+    #     return render(request,"home-view.html")
+    # else:
+    #     raise PermissionDenied
+
 
 # class ViewPDF(View):
 #     def get(self,request,*args,**kwargs):
