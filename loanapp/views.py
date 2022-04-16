@@ -1,6 +1,7 @@
 import shutil
 from django.shortcuts import render,HttpResponse
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
+from requests import request
 from .models import FilesUpload,CarDetail
 from django.conf import settings
 import openpyxl
@@ -9,9 +10,11 @@ from xhtml2pdf import pisa
 from io import BytesIO
 from django.template.loader import get_template
 from django.views import View
+from loanapp.decorators import check_session
 
 
 # Create your views here.
+@check_session(request)
 def home_view(request):
     if request.method=="POST":
         # shutil.rmtree("..\\maneedsocietyapp\\media") #removes the directory media and all the files in it.
@@ -50,8 +53,8 @@ def home_view(request):
         # reading from excel
 
         return render(request,"loan-agreement.html")
+    session=request.session
     return render(request,"home-view.html")
-
 
 # class ViewPDF(View):
 #     def get(self,request,*args,**kwargs):
