@@ -6,7 +6,7 @@ from .models import FilesUpload,CarDetail
 from django.conf import settings
 import openpyxl
 import os
-from xhtml2pdf import pisa
+# from xhtml2pdf import pisa
 from io import BytesIO
 from django.template.loader import get_template
 from django.views import View
