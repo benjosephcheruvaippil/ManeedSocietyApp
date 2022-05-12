@@ -2,7 +2,7 @@ import shutil
 from django.shortcuts import render,HttpResponse
 from django.http import HttpResponse,HttpResponseRedirect
 from requests import request
-from .models import FilesUpload,CarDetail
+from .models import FilesUpload,MemberDetails
 from django.conf import settings
 import openpyxl
 import os
@@ -15,7 +15,7 @@ from loanapp.decorators import check_session
 
 
 # Create your views here.
-@check_session
+# @check_session
 def home_view(request):
     if request.method=="POST":
         # shutil.rmtree("..\\maneedsocietyapp\\media") #removes the directory media and all the files in it.
@@ -38,20 +38,20 @@ def home_view(request):
             for c in range(column_nos):
                 if r!=0:
                     cell_obj = sheet_obj.cell(row = r+1, column = c+1)
-                    if c+1==1:
-                        dict_car['name']=cell_obj.value
                     if c+1==2:
-                        dict_car['make']=cell_obj.value
+                        dict_car['member_number']=cell_obj.value
                     if c+1==3:
-                        dict_car['model']=cell_obj.value
+                        dict_car['member_type']=cell_obj.value
+                    if c+1==4:
+                        dict_car['name']=cell_obj.value
+                    if c+1==5:
+                        dict_car['sex']=cell_obj.value
             if r!=0:
-                car_data=CarDetail.objects.create(
-                    name=dict_car['name'],make=dict_car['make'],model=dict_car['model']
+                member_data=MemberDetails.objects.create(
+                    member_number=dict_car['member_number'],member_type=dict_car['member_type'],name=dict_car['name'],sex=dict_car['sex']
                 )   
-                print("Car Data",car_data)    
+                print("Member Data",member_data)    
 
-        # print("Cell value",cell_obj.value)
-        # reading from excel
 
         return render(request,"loan-agreement.html")
     session=request.session

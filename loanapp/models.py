@@ -1,29 +1,26 @@
+from datetime import date
 from django.db import models
 
 # Create your models here.
 class FilesUpload(models.Model):
     file=models.FileField()
 
-class CarDetail(models.Model):
-    name=models.CharField(max_length=200)
-    make=models.CharField(max_length=200)
-    model=models.CharField(max_length=200)
 
 class MemberDetails(models.Model):
-    member_number=models.IntegerField
-    member_type=models.CharField
-    name=models.CharField(max_length=300)
-    sex=models.CharField
-    father_husband_name=models.CharField
-    house_name=models.CharField
-    kara=models.CharField
-    post=models.CharField
-    pin=models.CharField
-    village=models.CharField
-    taluk=models.CharField
-    panchayath=models.CharField
-    ward=models.CharField
-    mobile_number=models.CharField
-    dob=models.DateField
-    age=models.IntegerField
-    aadhar=models.CharField
+    member_number=models.IntegerField(default=0)
+    member_type=models.CharField(max_length=2,default="")
+    name=models.CharField(max_length=300,default="")
+    sex=models.CharField(max_length=3,default="")
+    father_husband_name=models.CharField(max_length=300,default="")
+    house_name=models.CharField(max_length=700,default="")
+    kara=models.CharField(max_length=700,default="")
+    post=models.CharField(max_length=300,default="")
+    pin=models.CharField(max_length=300,default="")
+    village=models.CharField(max_length=300,default="")
+    taluk=models.CharField(max_length=300,default="")
+    panchayath=models.CharField(max_length=300,default="")
+    ward=models.CharField(max_length=300,default="")
+    mobile_number=models.CharField(max_length=300,default="")
+    dob=models.DateField(default=date.today)
+    age=models.IntegerField(default=0)
+    aadhar=models.CharField(max_length=300,default="")
