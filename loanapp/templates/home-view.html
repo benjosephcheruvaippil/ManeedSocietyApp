@@ -52,6 +52,11 @@
 <div id="ChittyDoc" class="tabcontent">
   <h3>Chitty Document</h3>
   <p>Click here to download the chitty agreement</p>
+  <form action="{% url 'render-chitty-agreement' %}" method="post">
+    {% csrf_token %}
+    
+    <p><input type="submit" value="Generate PDF"></p>
+  </form>
 </div>
 
 <script>
