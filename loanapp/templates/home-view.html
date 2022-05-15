@@ -55,32 +55,108 @@
   <form action="{% url 'render-chitty-agreement' %}" method="post">
     {% csrf_token %}
 
-    <p><input type="text" name="person_1" placeholder="Person 1"></p>
-    <p><input type="text" name="person_2" placeholder="Person 2"></p>
-    <p><input type="text" name="person_3" placeholder="Person 3"></p>
-    <p><input type="text" name="person_4" placeholder="Person 4"></p>
-
-    <p><input type="text" name="mds_no" placeholder="mds_no"></p>
-    <p><input type="text" name="monthly_instalment_amount" placeholder="monthly_instalment_amount"></p>
-    <p><input type="text" name="term" placeholder="term"></p>
-    <p><input type="text" name="total_amount" placeholder="total_amount"></p>
-    <p><input type="text" name="chittal_no" placeholder="chittal_no"></p>
-    <p><input type="text" name="auction_instalment_no" placeholder="auction_instalment_no"></p>
-    <p><input type="text" name="auction_date" placeholder="auction_date"></p>
-    <p><input type="text" name="less_called_amount" placeholder="less_called_amount"></p>
-    <p><input type="text" name="sro" placeholder="sro"></p>
-    <p><input type="text" name="land_document_no" placeholder="land_document_no"></p>
-    <p><input type="text" name="no_of_executants" placeholder="no_of_executants"></p>
-    <p><input type="text" name="date_of_instalment" placeholder="date_of_instalment"></p>
-    <p><input type="text" name="property_owner_specify_no" placeholder="property_owner_specify_no"></p>
-    <p><input type="text" name="district" placeholder="district"></p>
-    <p><input type="text" name="sub_district" placeholder="sub_district"></p>
-    <p><input type="text" name="taluk" placeholder="taluk"></p>
-    <p><input type="text" name="village" placeholder="village"></p>
-    <p><input type="text" name="kara" placeholder="kara"></p>
-    <p><input type="text" name="sy_no_and_sy_sub_division_no" placeholder="sy_no_and_sy_sub_division_no"></p>
-    <p><input type="text" name="re_sy_no" placeholder="re_sy_no"></p>
-    <p><input type="text" name="area" placeholder="area"></p>
+    <table style="background-color:aliceblue;">
+      <tr>
+        <td><label>Person 1</label></td>
+        <td style="width:300px ;"><input type="text" name="person_1" placeholder="Person 1" required></td>
+      </tr>
+      <tr>
+        <td><label>Person 2</label></td>
+        <td><input type="text" name="person_2" placeholder="Person 2" required></td>
+      </tr>
+      <tr>
+        <td><label>Person 3</label></td>
+        <td><input type="text" name="person_3" placeholder="Person 3" required></td>
+      </tr>
+      <tr>
+        <td><label>Person 4</label></td>
+        <td><input type="text" name="person_4" placeholder="Person 4" required></td>
+      </tr>
+      <tr>
+        <td><label>MDS NO.</label></td>
+        <td><input type="text" name="mds_no" placeholder="mds_no" required></td>
+      </tr>
+      <tr>
+        <td><label>MONTHLY INSTALMENT AMOUNT</label></td>
+        <td><input type="number" name="monthly_instalment_amount" size="30" placeholder="monthly_instalment_amount" required></td>
+      </tr>
+      <tr>
+        <td><label>TERM</label></td>
+        <td><input type="number" name="term" placeholder="term" required></td>
+      </tr>
+      <tr>
+        <td><label>TOTAL AMOUNT</label></td>
+        <td><input type="number" name="total_amount" placeholder="total_amount" required></td>
+      </tr>
+      <tr>
+        <td><label>CHITTAL NO</label></td>
+        <td><input type="text" name="chittal_no" placeholder="chittal_no" required></td>
+      </tr>
+      <tr>
+        <td><label>AUCTION INSTALMENT.NO</label></td>
+        <td><input type="number" name="auction_instalment_no" placeholder="auction_instalment_no" required></td>
+      </tr>
+      <tr>
+        <td><label>AUCTION DATE</label></td>
+        <td><input type="text" name="auction_date" placeholder="auction_date" required></td>
+      </tr>
+      <tr>
+        <td><label>LESS CALLED AMOUNT</label></td>
+        <td><input type="number" name="less_called_amount" placeholder="less_called_amount" required></td>
+      </tr>
+      <tr>
+        <td><label>SRO</label></td>
+        <td><input type="text" name="sro" placeholder="sro" required></td>
+      </tr>
+      <tr>
+        <td><label>LAND DOCUMENT NO</label></td>
+        <td><input type="text" name="land_document_no" placeholder="land_document_no" required></td>
+      </tr>
+      <tr>
+        <td><label>NO OF EXECUTANTS</label></td>
+        <td><input type="text" name="no_of_executants" placeholder="no_of_executants" required></td>
+      </tr>
+      <tr>
+        <td><label>DATE OF INSTALMENT</label></td>
+        <td><input type="text" name="date_of_instalment" placeholder="date_of_instalment" required></td>
+      </tr>
+      <tr>
+        <td><label>PROPERTY OWNER ( SPECIFY NO)</label></td>
+        <td><input type="text" name="property_owner_specify_no" size="30" placeholder="property_owner_specify_no" required></td>
+      </tr>
+      <tr>
+        <td><label>DISTRICT</label></td>
+        <td><input type="text" name="district" placeholder="district" required></td>
+      </tr>
+      <tr>
+        <td><label>SUB DISTRICT</label></td>
+        <td><input type="text" name="sub_district" placeholder="sub_district" required></td>
+      </tr>
+      <tr>
+        <td><label>TALUK</label></td>
+        <td><input type="text" name="taluk" placeholder="taluk" required></td>
+      </tr>
+      <tr>
+        <td><label>VILLAGE</label></td>
+        <td><input type="text" name="village" placeholder="village" required></td>
+      </tr>
+      <tr>
+        <td><label>KARA</label></td>
+        <td><input type="text" name="kara" placeholder="kara" required></td>
+      </tr>
+      <tr>
+        <td><label>SY.NO. & SY.SUB DIVISION.NO</label></td>
+        <td><input type="text" name="sy_no_and_sy_sub_division_no" size="30" placeholder="sy_no_and_sy_sub_division_no" required></td>
+      </tr>
+      <tr>
+        <td><label>RE.SY.NO.</label></td>
+        <td><input type="text" name="re_sy_no" placeholder="re_sy_no" required></td>
+      </tr>
+      <tr>
+        <td><label>AREA</label></td>
+        <td><input type="text" name="area" placeholder="area" required></td>
+      </tr>
+    </table>
 
     <p><input type="submit" value="Generate PDF"></p>
   </form>
@@ -89,6 +165,7 @@
 <script>
 $(document).ready(function(){
   document.getElementById('btnUpload').click();
+
 });
 
 function openCity(evt, cityName) {
