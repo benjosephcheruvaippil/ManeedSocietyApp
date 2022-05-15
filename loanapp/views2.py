@@ -3,6 +3,7 @@ from loanapp.models import MemberDetails
 from django.template.loader import get_template
 from django.http import HttpResponse
 from datetime import date
+from num2words import num2words
 
 def RenderHTML(request):
     print(request.POST.get('person_1'))
@@ -78,14 +79,14 @@ def RenderHTML(request):
     txtbx7=auction_date
     txtbx8=total_amount
     txtbx9=less_called_amount
-    txtbx10=total_amount-less_called_amount
-    txtbx11="" #auction amount in words
-    txtbx12=auction_instalment_no+1
+    txtbx10=int(total_amount)-int(less_called_amount)
+    txtbx11=num2words(txtbx10) #auction amount in words
+    txtbx12=int(auction_instalment_no)+1
     txtbx13=term
-    txtbx14=term-auction_instalment_no
+    txtbx14=int(term)-int(auction_instalment_no)
     txtbx15=monthly_instalment_amount
-    txtbx16=monthly_instalment_amount*txtbx14
-    txtbx17="" #total remaining amount in words
+    txtbx16=int(monthly_instalment_amount)*int(txtbx14)
+    txtbx17=num2words(txtbx16) #total remaining amount in words
     txtbx18=sro
     txtbx19=land_document_no
     txtbx20=village
@@ -97,10 +98,10 @@ def RenderHTML(request):
     txtbx26=no_of_executants
     txtbx27=no_of_executants
     txtbx28=date_of_instalment
-    txtbx29=monthly_instalment_amount*txtbx14
-    txtbx30="" #total remaining amount in words
+    txtbx29=int(monthly_instalment_amount)*int(txtbx14)
+    txtbx30=num2words(txtbx29) #total remaining amount in words
     txtbx31=monthly_instalment_amount
-    txtbx32=term-auction_instalment_no
+    txtbx32=int(term)-int(auction_instalment_no)
     txtbx33=no_of_executants
     txtbx34=no_of_executants
     txtbx35=property_owner_specify_no
@@ -203,6 +204,56 @@ def RenderHTML(request):
         "person_4_house":person_4_house,
         "person_4_father_husband":person_4_father_husband,
         "person_4_age":person_4_age,
+
+        "txtbx1":txtbx1,
+        "txtbx2":txtbx2,
+        "txtbx3":txtbx3,
+        "txtbx4":txtbx4,
+        "txtbx5":txtbx5,
+        "txtbx6":txtbx6,
+        "txtbx7":txtbx7,
+        "txtbx8":txtbx8,
+        "txtbx9":txtbx9,
+        "txtbx10":txtbx10,
+        "txtbx11":txtbx11,
+        "txtbx12":txtbx12,
+        "txtbx13":txtbx13,
+        "txtbx14":txtbx14,
+        "txtbx15":txtbx15,
+        "txtbx16":txtbx16,
+        "txtbx17":txtbx17,
+        "txtbx18":txtbx18,
+        "txtbx19":txtbx19,
+        "txtbx20":txtbx20,
+        "txtbx21":txtbx21,
+        "txtbx22":txtbx22,
+        "txtbx23":txtbx23,
+        "txtbx24":txtbx24,
+        "txtbx25":txtbx25,
+        "txtbx26":txtbx26,
+        "txtbx27":txtbx27,
+        "txtbx28":txtbx28,
+        "txtbx29":txtbx29,
+        "txtbx30":txtbx30,
+        "txtbx31":txtbx31,
+        "txtbx32":txtbx32,
+        "txtbx33":txtbx33,
+        "txtbx34":txtbx34,
+        "txtbx35":txtbx35,
+        "txtbx36":txtbx36,
+        "txtbx37":txtbx37,
+        "txtbx38":txtbx38,
+        "txtbx39":txtbx39,
+        "txtbx40":txtbx40,
+        "txtbx41":txtbx41,
+        "txtbx42":txtbx42,
+        "txtbx43":txtbx43,
+        "txtbx44":txtbx44,
+        "txtbx45":txtbx45,
+        "txtbx46":txtbx46,
+        "txtbx47":txtbx47,
+        "txtbx48":txtbx48,
+        "txtbx49":txtbx49
     }
 
     template=get_template("chitty-agreement.html")
