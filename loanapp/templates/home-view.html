@@ -54,7 +54,12 @@
   <p>Click here to download the chitty agreement</p>
   <form action="{% url 'render-chitty-agreement' %}" method="post">
     {% csrf_token %}
-    
+
+    <p><input type="text" name="person_1" placeholder="Person 1"></p>
+    <p><input type="text" name="person_2" placeholder="Person 2"></p>
+    <p><input type="text" name="person_3" placeholder="Person 3"></p>
+    <p><input type="text" name="person_4" placeholder="Person 4"></p>
+
     <p><input type="submit" value="Generate PDF"></p>
   </form>
 </div>
