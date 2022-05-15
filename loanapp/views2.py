@@ -88,7 +88,7 @@ def RenderHTML(request):
     txtbx17="" #total remaining amount in words
     txtbx18=sro
     txtbx19=land_document_no
-    txtbx20="" #village
+    txtbx20=village
     txtbx21=sy_no_and_sy_sub_division_no
     txtbx22=area
     txtbx23=no_of_executants
@@ -104,7 +104,7 @@ def RenderHTML(request):
     txtbx33=no_of_executants
     txtbx34=no_of_executants
     txtbx35=property_owner_specify_no
-    txtbx36="" #village
+    txtbx36=village
     txtbx37=sro
     txtbx38=land_document_no
     txtbx39=district
@@ -115,7 +115,7 @@ def RenderHTML(request):
     txtbx44=sy_no_and_sy_sub_division_no
     txtbx45=re_sy_no
     txtbx46=area
-    txtbx47="" #village
+    txtbx47=village
     txtbx48=sy_no_and_sy_sub_division_no
     txtbx49=area
 
