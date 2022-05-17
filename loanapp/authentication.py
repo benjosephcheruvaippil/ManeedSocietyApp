@@ -33,7 +33,8 @@ def login(request):
 
             request.session['username']=usernameInput
 
-            return render(request,"home-view.html")
+            # return render(request,"home-view.html")
+            return redirect("home-view")
         except:
             return render(request,"index.html")
     
@@ -56,6 +57,6 @@ def register(request):
 def logout(request):
     if request.session.has_key('username'):
         request.session.flush()
-        return redirect('')
+        return redirect('http://127.0.0.1:8000/')
     else:
-        return redirect('')
+        return redirect('http://127.0.0.1:8000/')

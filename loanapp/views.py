@@ -1,5 +1,5 @@
 import shutil
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import redirect, render,HttpResponse
 from django.http import HttpResponse,HttpResponseRedirect
 from requests import request
 from .models import FilesUpload,MemberDetails
@@ -90,8 +90,9 @@ def home_view(request):
                 )   
                 print("Member Data",member_data)    
 
-
-        return render(request,"loan-agreement.html")
+        content={'form':'Member data uploaded successfully'}
+        return render(request,"home-view.html",content)
+    
     session=request.session
     return render(request,"home-view.html")
     # if request.session.has_key('username'):

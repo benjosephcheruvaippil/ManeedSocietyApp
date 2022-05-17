@@ -35,6 +35,8 @@
     <p><input type="file" id="myFile" name="file"></p>
     <input type="submit">
   </form>
+  <br/>
+  <span style="color:green ; font-weight: 600;">{{form}}</span>
 </div>
 
 <div id="LoanDoc" class="tabcontent">
@@ -65,21 +67,21 @@
   <form action="{% url 'render-chitty-agreement' %}" method="post">
     {% csrf_token %}
 
-    <table style="background-color:aliceblue;">
+    <table>
       <tr>
-        <td><label>Person 1</label></td>
+        <td><label>PERSON 1</label></td>
         <td style="width:300px ;"><input type="text" name="person_1" placeholder="Person 1" required></td>
       </tr>
       <tr>
-        <td><label>Person 2</label></td>
+        <td><label>PERSON 2</label></td>
         <td><input type="text" name="person_2" placeholder="Person 2" required></td>
       </tr>
       <tr>
-        <td><label>Person 3</label></td>
+        <td><label>PERSON 3</label></td>
         <td><input type="text" name="person_3" placeholder="Person 3" required></td>
       </tr>
       <tr>
-        <td><label>Person 4</label></td>
+        <td><label>PERSON 4</label></td>
         <td><input type="text" name="person_4" placeholder="Person 4" required></td>
       </tr>
       <tr>
