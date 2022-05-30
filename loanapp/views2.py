@@ -256,7 +256,11 @@ def RenderHTML(request):
         "txtbx49":txtbx49
     }
 
-    template=get_template("chitty-agreement.html")
+    if 'bond' in request.POST:
+        template=get_template("chitty-agreement.html")
+    elif 'receipt' in request.POST:
+        template=get_template("chitty-receipt.html")
+
     html=template.render(loan_data)
     return HttpResponse(html)
 
