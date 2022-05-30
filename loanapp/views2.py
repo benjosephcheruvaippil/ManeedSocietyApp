@@ -23,6 +23,9 @@ def RenderHTML(request):
     person_1_house=""
     person_1_father_husband=""
     person_1_age=""
+    person_1_post=""
+    person_1_pin=""
+
 
     person_2_name=""
     person_2_taluk=""
@@ -31,6 +34,8 @@ def RenderHTML(request):
     person_2_house=""
     person_2_father_husband=""
     person_2_age=""
+    person_2_post=""
+    person_2_pin=""
 
     person_3_name=""
     person_3_taluk=""
@@ -39,6 +44,8 @@ def RenderHTML(request):
     person_3_house=""
     person_3_father_husband=""
     person_3_age=""
+    person_3_post=""
+    person_4_pin=""
 
     person_4_name=""
     person_4_taluk=""
@@ -47,6 +54,8 @@ def RenderHTML(request):
     person_4_house=""
     person_4_father_husband=""
     person_4_age=""
+    person_4_post=""
+    person_4_pin=""
 
     mds_no=request.POST.get('mds_no')
     monthly_instalment_amount=request.POST.get('monthly_instalment_amount')
@@ -79,7 +88,7 @@ def RenderHTML(request):
     txtbx7=auction_date
     txtbx8=total_amount
     txtbx9=less_called_amount
-    txtbx10=int(total_amount)-int(less_called_amount)
+    txtbx10=int(total_amount)-int(less_called_amount) #auction amount
     txtbx11=num2words(txtbx10) #auction amount in words
     txtbx12=int(auction_instalment_no)+1
     txtbx13=term
@@ -131,6 +140,8 @@ def RenderHTML(request):
         person_1_house=mem.house_name
         person_1_father_husband=mem.father_husband_name
         person_1_age=mem.age
+        person_1_post=mem.post
+        person_1_pin=mem.pin
     
     get_Person_2_Details=MemberDetails.objects.filter(member_number=mem_num_2).all()
     for mem in get_Person_2_Details:
@@ -141,6 +152,8 @@ def RenderHTML(request):
         person_2_house=mem.house_name
         person_2_father_husband=mem.father_husband_name
         person_2_age=mem.age
+        person_2_post=mem.post
+        person_2_pin=mem.pin
     
     get_Person_3_Details=MemberDetails.objects.filter(member_number=mem_num_3).all()
     for mem in get_Person_3_Details:
@@ -151,6 +164,8 @@ def RenderHTML(request):
         person_3_house=mem.house_name
         person_3_father_husband=mem.father_husband_name
         person_3_age=mem.age
+        person_3_post=mem.post
+        person_3_pin=mem.pin
     
     get_Person_4_Details=MemberDetails.objects.filter(member_number=mem_num_4).all()
     for mem in get_Person_4_Details:
@@ -161,6 +176,8 @@ def RenderHTML(request):
         person_4_house=mem.house_name
         person_4_father_husband=mem.father_husband_name
         person_4_age=mem.age
+        person_4_post=mem.post
+        person_4_pin=mem.pin
 
     loan_data={
         # "vaypanumber":request.POST.get('txtVaypa') if request.POST.get('txtVaypa')!="" else "" ,
@@ -177,6 +194,8 @@ def RenderHTML(request):
         "person_1_house":person_1_house,
         "person_1_father_husband":person_1_father_husband,
         "person_1_age":person_1_age,
+        "person_1_post":person_1_post,
+        "person_1_pin":person_1_pin,
 
         "mem_num_2":mem_num_2,
         "person_2_name":person_2_name,
@@ -186,6 +205,8 @@ def RenderHTML(request):
         "person_2_house":person_2_house,
         "person_2_father_husband":person_2_father_husband,
         "person_2_age":person_2_age,
+        "person_2_post":person_2_post,
+        "person_2_pin":person_2_pin,
 
         "mem_num_3":mem_num_3,
         "person_3_name":person_3_name,
@@ -195,6 +216,8 @@ def RenderHTML(request):
         "person_3_house":person_3_house,
         "person_3_father_husband":person_3_father_husband,
         "person_3_age":person_3_age,
+        "person_3_post":person_3_post,
+        "person_3_pin":person_3_pin,
 
         "mem_num_4":mem_num_4,
         "person_4_name":person_4_name,
@@ -204,6 +227,8 @@ def RenderHTML(request):
         "person_4_house":person_4_house,
         "person_4_father_husband":person_4_father_husband,
         "person_4_age":person_4_age,
+        "person_4_post":person_4_post,
+        "person_4_pin":person_4_pin,
 
         "txtbx1":txtbx1,
         "txtbx2":txtbx2,
