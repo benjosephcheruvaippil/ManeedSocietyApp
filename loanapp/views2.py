@@ -180,9 +180,6 @@ def RenderHTML(request):
         person_4_pin=mem.pin
 
     loan_data={
-        # "vaypanumber":request.POST.get('txtVaypa') if request.POST.get('txtVaypa')!="" else "" ,
-        # "thuka":request.POST.get('txtThuka') if request.POST.get('txtThuka')!="" else "",
-        # "jamyam1":request.POST.get('txtJamyam1'),
         "year_in_words":year_in_words,
         "month_in_words":month_in_words,
 
@@ -285,6 +282,8 @@ def RenderHTML(request):
         template=get_template("chitty-agreement.html")
     elif 'receipt' in request.POST:
         template=get_template("chitty-receipt.html")
+    elif 'promisory_note_1' in request.POST:
+        template=get_template("chitty-promissory.html")
 
     html=template.render(loan_data)
     return HttpResponse(html)
