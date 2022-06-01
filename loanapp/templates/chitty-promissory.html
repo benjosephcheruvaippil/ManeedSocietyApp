@@ -21,12 +21,7 @@
            display: table;
            clear: both;
            }
-  
-           /* table, th, td {
-              border: 1px solid black;
-              border-collapse: collapse;
-              width:max-content;
-          } */
+
         </style>
      </head>
      <body>
@@ -63,12 +58,12 @@
             <table>
                <tr>
                    <td style="width: 150px;">പേര് :</td>
-                   <td>{{person_1_name}}&nbsp;&nbsp;({{mem_num_1}})</td>
+                   <td><span id="spnPersonName"></span>&nbsp;&nbsp;<span id="spnPersonMemNum"></span></td>
                    <td style="width: 200px;">ഒപ്പ് :</td>
                </tr>
                <tr>
                    <td>മേൽവിലാസം :</td>
-                   <td>{{person_1_house}} (H) {{person_1_post}} P.O, {{person_1_kara}} PIN: {{person_1_pin}}</td>
+                   <td><span id="spnHouseName"></span> (H) <span id="spnPost"></span> P.O, <span id="spnKara"></span> PIN: <span id="spnPin"></span></td>
                    <td></td>
                </tr>
                
@@ -78,7 +73,47 @@
      <script>
         $(document).ready(function(){
             
-            
+             var fromButton='{{fromButton}}'
+             if(fromButton=='person1'){
+                $("#spnPersonName").append('{{person_1_name}}');
+                $("#spnPersonMemNum").append('(');
+                $("#spnPersonMemNum").append('{{mem_num_1}}');
+                $("#spnPersonMemNum").append(')');
+                $("#spnHouseName").append('{{person_1_house}}');
+                $("#spnPost").append('{{person_1_post}}');
+                $("#spnKara").append('{{person_1_kara}}');
+                $("#spnPin").append('{{person_1_pin}}');
+             }
+             else if(fromButton=='person2'){
+                $("#spnPersonName").append('{{person_2_name}}');
+                $("#spnPersonMemNum").append('(');
+                $("#spnPersonMemNum").append('{{mem_num_2}}');
+                $("#spnPersonMemNum").append(')');
+                $("#spnHouseName").append('{{person_2_house}}');
+                $("#spnPost").append('{{person_2_post}}');
+                $("#spnKara").append('{{person_2_kara}}');
+                $("#spnPin").append('{{person_2_pin}}');
+             }
+             else if(fromButton=='person3'){
+                $("#spnPersonName").append('{{person_3_name}}');
+                $("#spnPersonMemNum").append('(');
+                $("#spnPersonMemNum").append('{{mem_num_3}}');
+                $("#spnPersonMemNum").append(')');
+                $("#spnHouseName").append('{{person_3_house}}');
+                $("#spnPost").append('{{person_3_post}}');
+                $("#spnKara").append('{{person_3_kara}}');
+                $("#spnPin").append('{{person_3_pin}}');
+             }
+             else if(fromButton=='person4'){
+                $("#spnPersonName").append('{{person_4_name}}');
+                $("#spnPersonMemNum").append('(');
+                $("#spnPersonMemNum").append('{{mem_num_4}}');
+                $("#spnPersonMemNum").append(')');
+                $("#spnHouseName").append('{{person_4_house}}');
+                $("#spnPost").append('{{person_4_post}}');
+                $("#spnKara").append('{{person_4_kara}}');
+                $("#spnPin").append('{{person_4_pin}}');
+             }
         
             window.print();
         });

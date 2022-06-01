@@ -6,11 +6,25 @@ from datetime import date
 from num2words import num2words
 
 def RenderHTML(request):
-    print(request.POST.get('person_1'))
-    mem_num_1=request.POST.get('person_1')
-    mem_num_2=request.POST.get('person_2')
-    mem_num_3=request.POST.get('person_3')
-    mem_num_4=request.POST.get('person_4')
+    if request.POST.get('person_1')!='':
+        mem_num_1=request.POST.get('person_1')
+    else:
+        mem_num_1=0
+
+    if request.POST.get('person_2')!='':
+        mem_num_2=request.POST.get('person_2')
+    else:
+        mem_num_2=0
+
+    if request.POST.get('person_3')!='':
+        mem_num_3=request.POST.get('person_3')
+    else:
+        mem_num_3=0
+
+    if request.POST.get('person_4')!='':
+        mem_num_4=request.POST.get('person_4')
+    else:
+        mem_num_4=0
 
     todays_date=date.today()
     year_in_words=RetrieveYearAndMonth(todays_date.year)
@@ -45,7 +59,7 @@ def RenderHTML(request):
     person_3_father_husband=""
     person_3_age=""
     person_3_post=""
-    person_4_pin=""
+    person_3_pin=""
 
     person_4_name=""
     person_4_taluk=""
@@ -283,6 +297,16 @@ def RenderHTML(request):
     elif 'receipt' in request.POST:
         template=get_template("chitty-receipt.html")
     elif 'promisory_note_1' in request.POST:
+        loan_data['fromButton']='person1'
+        template=get_template("chitty-promissory.html")
+    elif 'promisory_note_2' in request.POST:
+        loan_data['fromButton']='person2'
+        template=get_template("chitty-promissory.html")
+    elif 'promisory_note_3' in request.POST:
+        loan_data['fromButton']='person3'
+        template=get_template("chitty-promissory.html")
+    elif 'promisory_note_4' in request.POST:
+        loan_data['fromButton']='person4'
         template=get_template("chitty-promissory.html")
 
     html=template.render(loan_data)
