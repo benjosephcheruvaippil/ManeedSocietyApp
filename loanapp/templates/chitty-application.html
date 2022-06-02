@@ -22,103 +22,251 @@
            clear: both;
            }
 
+           table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+
         </style>
      </head>
-     <body>
-         <!-- <div style="text-align: center;font-size: large;text-decoration: underline;">
-             <p>പ്രോമിസ്സറി നോട്ട്</p>
-         </div> -->
-         <div>
-            <p style="font-weight: 600;">മണീട് പഞ്ചായത്ത് ഗ്രാമീണ കോ-ഓപ്പറേറ്റീവ് സൊസൈറ്റി ലിമിറ്റഡ്</p>
-                <p>നമ്പർ ഇ –1358</p>
-                <p style="font-weight: 600;text-decoration: underline;">ഏഴക്കരനാട്‌ പി ഒ , എറണാകുളം  ജില്ല, പിൻ -  682308</p>
+     <body style="font-size:small ;">
+         <div style="text-align: center;">
+            <p style="font-weight: 600;">മണീട് പഞ്ചായത്ത് ഗ്രാമീണ കോ-ഓപ്പറേറ്റീവ് സൊസൈറ്റി ലിമിറ്റഡ് <br> നമ്പർ ഇ –1358 <br> ഏഴക്കരനാട്‌ പി ഒ , എറണാകുളം  ജില്ല, പിൻ -  682308</p>
          </div>
-         <div>
+         <!-- <div>
              <p>&nbsp;</p>
-         </div>
-         <div style="font-size: medium;">
-             <table>
+         </div> -->
+        <div>
+            <table>
                 <tr>
-                    <td style="width: 450px;">{{txtbx10}}/- രൂപ</td>
-                    <td>സ്ഥലം 	: EZHAKKARANAD</td>
+                    <td colspan="5">പ്രതിമാസ നിക്ഷേപ പദ്ധതി വായ്പ പണം അനുവദിക്കുന്നതിനുള്ള അപേക്ഷ</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td>1</td>
+                    <td>MDS നമ്പർ</td>
+                    <td>{{txtbx1}}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>MDS അംഗ നമ്പർ</td>
+                    <td>{{txtbx5}}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>പേര്</td>
+                    <td>MARY K V</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>സംഘത്തിലെ	അംഗ നമ്പർ</td>
+                    <td>C 285</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>പിതാവിൻറെ /ഭർത്താവിൻറെ പേര് </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>സ്ഥിര മേൽവിലാസം</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>തീയതി …………………….</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>തൊഴിൽ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>വയസ്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>മൊത്ത സംഖ്യ</td>
+                    <td>{{txtbx8}}</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>നറുക്കെടുത്ത തീയതി</td>
+                    <td>{{txtbx7}}</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>തവണ</td>
+                    <td>{{txtbx6}}</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>കമ്മീഷൻ ഉൾപ്പെടെ കുറഞ്ഞ സംഖ്യ</td>
+                    <td>{{txtbx9}}</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>വായ്പ  സംഖ്യ</td>
+                    <td>{{txtbx10}}</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>നൽകുന്ന ഈട്</td>
+                    <td>PERSONAL GUARANTEE & PROPERTY</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>ആൾ ജാമ്യമെങ്കിൽ ജാമ്യക്കാരുടെ,</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>സ്ഥിരമേൽവിലാസം</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Pin</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>സ്ഥിരമേൽവിലാസം</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Pin</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>3.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>സ്ഥിരമേൽവിലാസം</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Pin</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>4.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>സ്ഥിരമേൽവിലാസം</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Pin</td>
+                    <td></td>
                 </tr>
             </table>
-         </div>
-         <div style="text-align: justify;text-justify: inter-word; font-size: medium;">
-            <p>മണീട് പഞ്ചായത്ത് ഗ്രാമീണ കോ-ഓപ്പറേറ്റീവ് സൊസൈറ്റി ലിമിറ്റഡ് നമ്പർ ഇ–1358 നോ ടി സൊസൈറ്റി നിർദ്ദേശിക്കുന്നയാൾക്കോ ടി സൊസൈറ്റിയിൽ നിന്നും കിട്ടി ബോധിച്ച തുകയിലേക്ക് വേണ്ടി {{txtbx10}}/- രൂപ ({{txtbx11}}) ഇന്നേ ദിവസം മുതൽ തന്നുതീർക്കുന്നതു വരെ 18 ശതമാനം വരുന്ന വാർഷീകപലിശ സഹിതം ആവശ്യപ്പെടുന്ന സമയത്ത് തന്നുകൊള്ളാമെന്ന് ഞാൻ ഇതിനാൽ വാഗ്ദത്തം ചെയ്യുന്നു</p>
-        </div>
-        <div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-        </div>
-        <div style="font-size: medium;">
+            <p>ഇതിൽ പറഞ്ഞിരിക്കുന്ന വിവരങ്ങൾ സത്യമാണെന്നും MDS ഉപനിബന്ധനകളും സംഘത്തിൻറെ എല്ലാ നിബന്ധനകളും ഞാൻ/ഞങ്ങൾ അനുസരിച്ചുകൊള്ളാമെന്ന് ഇതിനാൽ പ്രതിജ്ഞ ചെയ്ത് കൊള്ളുന്നു.</p>
+            <p>സ്ഥലം: Ezhakkaranad</p>
+            <p>തിയതി ………../…………/………………</p>
             <table>
-               <tr>
-                   <td style="width: 150px;">പേര് :</td>
-                   <td><span id="spnPersonName"></span>&nbsp;&nbsp;<span id="spnPersonMemNum"></span></td>
-                   <td style="width: 200px;">ഒപ്പ് :</td>
-               </tr>
-               <tr>
-                   <td>മേൽവിലാസം :</td>
-                   <td><span id="spnHouseName"></span> (H) <span id="spnPost"></span> P.O, <span id="spnKara"></span> PIN: <span id="spnPin"></span></td>
-                   <td></td>
-               </tr>
-               
-           </table>
+                <tr>
+                    <td>1-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
+                    <td></td>
+                </tr>
+            </table>
+            <p>സെക്രട്ടറിയുടെ അഭിപ്രായം:</p>
+            <p>കമ്മിറ്റി തീരുമാനം : </p>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;പ്രസിഡൻറ്&emsp;&emsp;&emsp;&emsp;സെക്രട്ടറി</p>
         </div>
      </body>
      <script>
         $(document).ready(function(){
             
-             var fromButton='{{fromButton}}'
-             if(fromButton=='person1'){
-                $("#spnPersonName").append('{{person_1_name}}');
-                $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_1}}');
-                $("#spnPersonMemNum").append(')');
-                $("#spnHouseName").append('{{person_1_house}}');
-                $("#spnPost").append('{{person_1_post}}');
-                $("#spnKara").append('{{person_1_kara}}');
-                $("#spnPin").append('{{person_1_pin}}');
-             }
-             else if(fromButton=='person2'){
-                $("#spnPersonName").append('{{person_2_name}}');
-                $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_2}}');
-                $("#spnPersonMemNum").append(')');
-                $("#spnHouseName").append('{{person_2_house}}');
-                $("#spnPost").append('{{person_2_post}}');
-                $("#spnKara").append('{{person_2_kara}}');
-                $("#spnPin").append('{{person_2_pin}}');
-             }
-             else if(fromButton=='person3'){
-                $("#spnPersonName").append('{{person_3_name}}');
-                $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_3}}');
-                $("#spnPersonMemNum").append(')');
-                $("#spnHouseName").append('{{person_3_house}}');
-                $("#spnPost").append('{{person_3_post}}');
-                $("#spnKara").append('{{person_3_kara}}');
-                $("#spnPin").append('{{person_3_pin}}');
-             }
-             else if(fromButton=='person4'){
-                $("#spnPersonName").append('{{person_4_name}}');
-                $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_4}}');
-                $("#spnPersonMemNum").append(')');
-                $("#spnHouseName").append('{{person_4_house}}');
-                $("#spnPost").append('{{person_4_post}}');
-                $("#spnKara").append('{{person_4_kara}}');
-                $("#spnPin").append('{{person_4_pin}}');
-             }
+        
         
             window.print();
         });

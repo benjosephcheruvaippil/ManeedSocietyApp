@@ -294,6 +294,8 @@ def RenderHTML(request):
 
     if 'bond' in request.POST:
         template=get_template("chitty-agreement.html")
+    elif 'application' in request.POST:
+        template=get_template("chitty-application.html")
     elif 'receipt' in request.POST:
         template=get_template("chitty-receipt.html")
     elif 'promisory_note_1' in request.POST:
