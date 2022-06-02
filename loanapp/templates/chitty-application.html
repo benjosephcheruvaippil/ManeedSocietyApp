@@ -27,6 +27,11 @@
             border-collapse: collapse;
             }
 
+            .center {
+            margin-left: auto;
+            margin-right: auto;
+            }
+
         </style>
      </head>
      <body style="font-size:small ;">
@@ -37,29 +42,29 @@
              <p>&nbsp;</p>
          </div> -->
         <div>
-            <table>
+            <table class="center">
                 <tr>
-                    <td colspan="5">പ്രതിമാസ നിക്ഷേപ പദ്ധതി വായ്പ പണം അനുവദിക്കുന്നതിനുള്ള അപേക്ഷ</td>
+                    <td colspan="5" style="text-align:center ;">പ്രതിമാസ നിക്ഷേപ പദ്ധതി വായ്പ പണം അനുവദിക്കുന്നതിനുള്ള അപേക്ഷ</td>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>MDS നമ്പർ</td>
-                    <td colspan="3">{{txtbx1}}</td>
+                    <td colspan="3" style="font-weight:bold;">{{txtbx1}}</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>MDS അംഗ നമ്പർ</td>
-                    <td colspan="3">{{txtbx5}}</td>
+                    <td colspan="3" style="font-weight:bold;">{{txtbx5}}</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>പേര്</td>
-                    <td colspan="3">{{person_1_name}}</td>
+                    <td colspan="3" style="font-weight:bold;">{{person_1_name}}</td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>സംഘത്തിലെ	അംഗ നമ്പർ</td>
-                    <td colspan="3">{{mem_num_1_type}}&nbsp;{{mem_num_1}}</td>
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_1_type}}&nbsp;{{mem_num_1}}</td>
                 </tr>
                 <tr>
                     <td>5</td>
@@ -81,7 +86,7 @@
                 <tr>
                     <td>7</td>
                     <td>തൊഴിൽ</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_1_occupation}}</td>
                 </tr>
                 <tr>
                     <td>8</td>
@@ -116,7 +121,7 @@
                 <tr>
                     <td>14</td>
                     <td>നൽകുന്ന ഈട്</td>
-                    <td colspan="3">PERSONAL GUARANTEE & PROPERTY</td>
+                    <td colspan="3" style="font-weight:bold;">PERSONAL GUARANTEE & PROPERTY</td>
                 </tr>
                 <tr>
                     <td>15</td>
@@ -126,141 +131,141 @@
                 <tr>
                     <td></td>
                     <td style="text-align:right;">1.	സംഘത്തിലെ അംഗ നമ്പർ</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_2_type}}&nbsp;{{mem_num_2}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{person_2_name}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_2_father_husband}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_2_house}}&nbsp;(H)</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>{{person_2_post}}&nbsp;P.O,{{person_2_kara}}</td>
                     <td>Pin</td>
-                    <td></td>
+                    <td>{{person_2_pin}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">2.	സംഘത്തിലെ അംഗ നമ്പർ</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_3_type}}&nbsp;{{mem_num_3}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{person_3_name}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_3_father_husband}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_3_house}}&nbsp;(H)</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>{{person_3_post}}&nbsp;P.O,{{person_3_kara}}</td>
                     <td>Pin</td>
-                    <td></td>
+                    <td>{{person_3_pin}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">3.	സംഘത്തിലെ അംഗ നമ്പർ</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_4_type}}&nbsp;{{mem_num_4}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{person_4_name}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_4_father_husband}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_4_house}}&nbsp;(H)</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>{{person_4_post}}&nbsp;P.O,{{person_4_kara}}</td>
                     <td>Pin</td>
-                    <td></td>
+                    <td>{{person_4_pin}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">4.	സംഘത്തിലെ അംഗ നമ്പർ</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_5_type}}&nbsp;{{mem_num_5}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3" style="font-weight:bold;">{{person_5_name}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_5_father_husband}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
-                    <td colspan="3"></td>
+                    <td colspan="3">{{person_5_house}}&nbsp;(H)</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>{{person_5_post}}&nbsp;P.O,{{person_5_kara}}</td>
                     <td>Pin</td>
-                    <td></td>
+                    <td>{{person_5_pin}}</td>
                 </tr>
             </table>
             <p>ഇതിൽ പറഞ്ഞിരിക്കുന്ന വിവരങ്ങൾ സത്യമാണെന്നും MDS ഉപനിബന്ധനകളും സംഘത്തിൻറെ എല്ലാ നിബന്ധനകളും ഞാൻ/ഞങ്ങൾ അനുസരിച്ചുകൊള്ളാമെന്ന് ഇതിനാൽ പ്രതിജ്ഞ ചെയ്ത് കൊള്ളുന്നു.</p>
             <p>സ്ഥലം: Ezhakkaranad</p>
             <p>തിയതി ………../…………/………………</p>
-            <table>
+            <table class="center">
                 <tr>
-                    <td>1-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
-                    <td></td>
+                    <td>1-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;">&nbsp;{{person_1_name}}</td>
                 </tr>
                 <tr>
-                    <td>2-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
-                    <td></td>
+                    <td>2-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;">&nbsp;{{person_2_name}}</td>
                 </tr>
                 <tr>
-                    <td>3-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
-                    <td></td>
+                    <td>3-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;">&nbsp;{{person_3_name}}</td>
                 </tr>
                 <tr>
-                    <td>4-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
-                    <td></td>
+                    <td>4-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;">&nbsp;{{person_4_name}}</td>
                 </tr>
                 <tr>
-                    <td>5-)o  കക്ഷി  പേര്, ഒപ്പ്</td>
-                    <td></td>
+                    <td>5-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="width:400px;font-weight:bold;">&nbsp;{{person_5_name}}</td>
                 </tr>
             </table>
             <p>സെക്രട്ടറിയുടെ അഭിപ്രായം:</p>
             <p>കമ്മിറ്റി തീരുമാനം : </p>
             
-            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;പ്രസിഡൻറ്&emsp;&emsp;&emsp;&emsp;സെക്രട്ടറി</p>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;പ്രസിഡൻറ്&emsp;&emsp;&emsp;&emsp;സെക്രട്ടറി</p>
         </div>
      </body>
      <script>

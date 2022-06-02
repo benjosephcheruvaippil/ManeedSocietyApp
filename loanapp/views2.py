@@ -26,6 +26,11 @@ def RenderHTML(request):
     else:
         mem_num_4=0
 
+    if request.POST.get('person_5')!='':
+        mem_num_5=request.POST.get('person_5')
+    else:
+        mem_num_5=0
+
     todays_date=date.today()
     year_in_words=RetrieveYearAndMonth(todays_date.year)
     month_in_words=RetrieveYearAndMonth(todays_date.month)
@@ -74,6 +79,18 @@ def RenderHTML(request):
     person_4_post=""
     person_4_pin=""
 
+    mem_num_5_type=""
+    person_5_name=""
+    person_5_taluk=""
+    person_5_village=""
+    person_5_kara=""
+    person_5_house=""
+    person_5_father_husband=""
+    person_5_age=""
+    person_5_post=""
+    person_5_pin=""
+
+    person_1_occupation=request.POST.get('person_1_occupation')
     mds_no=request.POST.get('mds_no')
     monthly_instalment_amount=request.POST.get('monthly_instalment_amount')
     term=request.POST.get('term')
@@ -199,6 +216,19 @@ def RenderHTML(request):
         person_4_age=mem.age
         person_4_post=mem.post
         person_4_pin=mem.pin
+    
+    get_Person_5_Details=MemberDetails.objects.filter(member_number=mem_num_5).all()
+    for mem in get_Person_5_Details:
+        mem_num_5_type=mem.member_type
+        person_5_name=mem.name
+        person_5_taluk=mem.taluk
+        person_5_village=mem.village
+        person_5_kara=mem.kara
+        person_5_house=mem.house_name
+        person_5_father_husband=mem.father_husband_name
+        person_5_age=mem.age
+        person_5_post=mem.post
+        person_5_pin=mem.pin
 
     loan_data={
         "year_in_words":year_in_words,
@@ -215,6 +245,7 @@ def RenderHTML(request):
         "person_1_age":person_1_age,
         "person_1_post":person_1_post,
         "person_1_pin":person_1_pin,
+        "person_1_occupation":person_1_occupation,
 
         "mem_num_2":mem_num_2,
         "mem_num_2_type":mem_num_2_type,
@@ -251,6 +282,18 @@ def RenderHTML(request):
         "person_4_age":person_4_age,
         "person_4_post":person_4_post,
         "person_4_pin":person_4_pin,
+
+        "mem_num_5":mem_num_5,
+        "mem_num_5_type":mem_num_5_type,
+        "person_5_name":person_5_name,
+        "person_5_taluk":person_5_taluk,
+        "person_5_village":person_5_village,
+        "person_5_kara":person_5_kara,
+        "person_5_house":person_5_house,
+        "person_5_father_husband":person_5_father_husband,
+        "person_5_age":person_5_age,
+        "person_5_post":person_5_post,
+        "person_5_pin":person_5_pin,
 
         "txtbx1":txtbx1,
         "txtbx2":txtbx2,
