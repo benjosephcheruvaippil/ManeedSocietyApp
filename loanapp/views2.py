@@ -30,6 +30,7 @@ def RenderHTML(request):
     year_in_words=RetrieveYearAndMonth(todays_date.year)
     month_in_words=RetrieveYearAndMonth(todays_date.month)
 
+    mem_num_1_type=""
     person_1_name=""
     person_1_taluk=""
     person_1_village=""
@@ -40,7 +41,7 @@ def RenderHTML(request):
     person_1_post=""
     person_1_pin=""
 
-
+    mem_num_2_type=""
     person_2_name=""
     person_2_taluk=""
     person_2_village=""
@@ -51,6 +52,7 @@ def RenderHTML(request):
     person_2_post=""
     person_2_pin=""
 
+    mem_num_3_type=""
     person_3_name=""
     person_3_taluk=""
     person_3_village=""
@@ -61,6 +63,7 @@ def RenderHTML(request):
     person_3_post=""
     person_3_pin=""
 
+    mem_num_4_type=""
     person_4_name=""
     person_4_taluk=""
     person_4_village=""
@@ -147,6 +150,7 @@ def RenderHTML(request):
 
     get_Person_1_Details=MemberDetails.objects.filter(member_number=mem_num_1).all()
     for mem in get_Person_1_Details:
+        mem_num_1_type=mem.member_type
         person_1_name=mem.name
         person_1_taluk=mem.taluk
         person_1_village=mem.village
@@ -159,6 +163,7 @@ def RenderHTML(request):
     
     get_Person_2_Details=MemberDetails.objects.filter(member_number=mem_num_2).all()
     for mem in get_Person_2_Details:
+        mem_num_2_type=mem.member_type
         person_2_name=mem.name
         person_2_taluk=mem.taluk
         person_2_village=mem.village
@@ -171,6 +176,7 @@ def RenderHTML(request):
     
     get_Person_3_Details=MemberDetails.objects.filter(member_number=mem_num_3).all()
     for mem in get_Person_3_Details:
+        mem_num_3_type=mem.member_type
         person_3_name=mem.name
         person_3_taluk=mem.taluk
         person_3_village=mem.village
@@ -183,6 +189,7 @@ def RenderHTML(request):
     
     get_Person_4_Details=MemberDetails.objects.filter(member_number=mem_num_4).all()
     for mem in get_Person_4_Details:
+        mem_num_4_type=mem.member_type
         person_4_name=mem.name
         person_4_taluk=mem.taluk
         person_4_village=mem.village
@@ -198,6 +205,7 @@ def RenderHTML(request):
         "month_in_words":month_in_words,
 
         "mem_num_1":mem_num_1,
+        "mem_num_1_type":mem_num_1_type,
         "person_1_name":person_1_name,
         "person_1_taluk":person_1_taluk,
         "person_1_village":person_1_village,
@@ -209,6 +217,7 @@ def RenderHTML(request):
         "person_1_pin":person_1_pin,
 
         "mem_num_2":mem_num_2,
+        "mem_num_2_type":mem_num_2_type,
         "person_2_name":person_2_name,
         "person_2_taluk":person_2_taluk,
         "person_2_village":person_2_village,
@@ -220,6 +229,7 @@ def RenderHTML(request):
         "person_2_pin":person_2_pin,
 
         "mem_num_3":mem_num_3,
+        "mem_num_3_type":mem_num_3_type,
         "person_3_name":person_3_name,
         "person_3_taluk":person_3_taluk,
         "person_3_village":person_3_village,
@@ -231,6 +241,7 @@ def RenderHTML(request):
         "person_3_pin":person_3_pin,
 
         "mem_num_4":mem_num_4,
+        "mem_num_4_type":mem_num_4_type,
         "person_4_name":person_4_name,
         "person_4_taluk":person_4_taluk,
         "person_4_village":person_4_village,
