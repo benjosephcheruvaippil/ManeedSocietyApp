@@ -43,6 +43,7 @@ def RenderHTML(request):
     person_1_house=""
     person_1_father_husband=""
     person_1_age=""
+    person_1_gender=""
     person_1_post=""
     person_1_pin=""
 
@@ -54,6 +55,7 @@ def RenderHTML(request):
     person_2_house=""
     person_2_father_husband=""
     person_2_age=""
+    person_2_gender=""
     person_2_post=""
     person_2_pin=""
 
@@ -65,6 +67,7 @@ def RenderHTML(request):
     person_3_house=""
     person_3_father_husband=""
     person_3_age=""
+    person_3_gender=""
     person_3_post=""
     person_3_pin=""
 
@@ -76,6 +79,7 @@ def RenderHTML(request):
     person_4_house=""
     person_4_father_husband=""
     person_4_age=""
+    person_4_gender=""
     person_4_post=""
     person_4_pin=""
 
@@ -87,6 +91,7 @@ def RenderHTML(request):
     person_5_house=""
     person_5_father_husband=""
     person_5_age=""
+    person_5_gender=""
     person_5_post=""
     person_5_pin=""
 
@@ -175,6 +180,11 @@ def RenderHTML(request):
         person_1_house=mem.house_name
         person_1_father_husband=mem.father_husband_name
         person_1_age=mem.age
+        if mem.sex=="f" or mem.sex=="F":
+            person_1_gender="Female"
+        elif mem.sex=="m" or mem.sex=="M":
+            person_1_gender="Male"
+        
         person_1_post=mem.post
         person_1_pin=mem.pin
     
@@ -188,6 +198,11 @@ def RenderHTML(request):
         person_2_house=mem.house_name
         person_2_father_husband=mem.father_husband_name
         person_2_age=mem.age
+        if mem.sex=="f" or mem.sex=="F":
+            person_2_gender="Female"
+        elif mem.sex=="m" or mem.sex=="M":
+            person_2_gender="Male"
+
         person_2_post=mem.post
         person_2_pin=mem.pin
     
@@ -201,6 +216,11 @@ def RenderHTML(request):
         person_3_house=mem.house_name
         person_3_father_husband=mem.father_husband_name
         person_3_age=mem.age
+        if mem.sex=="f" or mem.sex=="F":
+            person_3_gender="Female"
+        elif mem.sex=="m" or mem.sex=="M":
+            person_3_gender="Male"
+
         person_3_post=mem.post
         person_3_pin=mem.pin
     
@@ -214,6 +234,11 @@ def RenderHTML(request):
         person_4_house=mem.house_name
         person_4_father_husband=mem.father_husband_name
         person_4_age=mem.age
+        if mem.sex=="f" or mem.sex=="F":
+            person_4_gender="Female"
+        elif mem.sex=="m" or mem.sex=="M":
+            person_4_gender="Male"
+
         person_4_post=mem.post
         person_4_pin=mem.pin
     
@@ -227,6 +252,11 @@ def RenderHTML(request):
         person_5_house=mem.house_name
         person_5_father_husband=mem.father_husband_name
         person_5_age=mem.age
+        if mem.sex=="f" or mem.sex=="F":
+            person_5_gender="Female"
+        elif mem.sex=="m" or mem.sex=="M":
+            person_5_gender="Male"
+
         person_5_post=mem.post
         person_5_pin=mem.pin
 
@@ -243,6 +273,7 @@ def RenderHTML(request):
         "person_1_house":person_1_house,
         "person_1_father_husband":person_1_father_husband,
         "person_1_age":person_1_age,
+        "person_1_gender":person_1_gender,
         "person_1_post":person_1_post,
         "person_1_pin":person_1_pin,
         "person_1_occupation":person_1_occupation,
@@ -256,6 +287,7 @@ def RenderHTML(request):
         "person_2_house":person_2_house,
         "person_2_father_husband":person_2_father_husband,
         "person_2_age":person_2_age,
+        "person_2_gender":person_2_gender,
         "person_2_post":person_2_post,
         "person_2_pin":person_2_pin,
 
@@ -268,6 +300,7 @@ def RenderHTML(request):
         "person_3_house":person_3_house,
         "person_3_father_husband":person_3_father_husband,
         "person_3_age":person_3_age,
+        "person_3_gender":person_3_gender,
         "person_3_post":person_3_post,
         "person_3_pin":person_3_pin,
 
@@ -280,6 +313,7 @@ def RenderHTML(request):
         "person_4_house":person_4_house,
         "person_4_father_husband":person_4_father_husband,
         "person_4_age":person_4_age,
+        "person_4_gender":person_4_gender,
         "person_4_post":person_4_post,
         "person_4_pin":person_4_pin,
 
@@ -292,6 +326,7 @@ def RenderHTML(request):
         "person_5_house":person_5_house,
         "person_5_father_husband":person_5_father_husband,
         "person_5_age":person_5_age,
+        "person_5_gender":person_5_gender,
         "person_5_post":person_5_post,
         "person_5_pin":person_5_pin,
 

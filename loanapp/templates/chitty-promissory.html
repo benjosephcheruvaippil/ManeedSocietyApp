@@ -63,7 +63,7 @@
                </tr>
                <tr>
                    <td>മേൽവിലാസം :</td>
-                   <td><span id="spnHouseName"></span> (H) <span id="spnPost"></span> P.O, <span id="spnKara"></span> PIN: <span id="spnPin"></span></td>
+                   <td style="width:320px;"><span id="spnHouseName"></span> (H), <br><span id="spnPost"></span> P.O, <br><span id="spnKara"></span>,<br> PIN: <span id="spnPin"></span></td>
                    <td></td>
                </tr>
                
@@ -77,7 +77,7 @@
              if(fromButton=='person1'){
                 $("#spnPersonName").append('{{person_1_name}}');
                 $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_1}}');
+                $("#spnPersonMemNum").append('{{mem_num_1_type}}&nbsp;{{mem_num_1}}');
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_1_house}}');
                 $("#spnPost").append('{{person_1_post}}');
@@ -87,7 +87,7 @@
              else if(fromButton=='person2'){
                 $("#spnPersonName").append('{{person_2_name}}');
                 $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_2}}');
+                $("#spnPersonMemNum").append('{{mem_num_2_type}}&nbsp;{{mem_num_2}}');
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_2_house}}');
                 $("#spnPost").append('{{person_2_post}}');
@@ -97,7 +97,7 @@
              else if(fromButton=='person3'){
                 $("#spnPersonName").append('{{person_3_name}}');
                 $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_3}}');
+                $("#spnPersonMemNum").append('{{mem_num_3_type}}&nbsp;{{mem_num_3}}');
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_3_house}}');
                 $("#spnPost").append('{{person_3_post}}');
@@ -107,7 +107,7 @@
              else if(fromButton=='person4'){
                 $("#spnPersonName").append('{{person_4_name}}');
                 $("#spnPersonMemNum").append('(');
-                $("#spnPersonMemNum").append('{{mem_num_4}}');
+                $("#spnPersonMemNum").append('{{mem_num_4_type}}&nbsp;{{mem_num_4}}');
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_4_house}}');
                 $("#spnPost").append('{{person_4_post}}');
