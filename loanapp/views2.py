@@ -128,13 +128,13 @@ def RenderHTML(request):
     txtbx8=total_amount
     txtbx9=less_called_amount
     txtbx10=int(total_amount)-int(less_called_amount) #auction amount
-    txtbx11=num2words(txtbx10) #auction amount in words
+    txtbx11=num2WordsModified(txtbx10) #auction amount in words
     txtbx12=int(auction_instalment_no)+1
     txtbx13=term
     txtbx14=int(term)-int(auction_instalment_no)
     txtbx15=monthly_instalment_amount
     txtbx16=int(monthly_instalment_amount)*int(txtbx14)
-    txtbx17=num2words(txtbx16) #total remaining amount in words
+    txtbx17=num2WordsModified(txtbx16) #total remaining amount in words
     txtbx18=sro
     txtbx19=land_document_no
     txtbx20=village
@@ -147,7 +147,7 @@ def RenderHTML(request):
     txtbx27=no_of_executants
     txtbx28=date_of_instalment
     txtbx29=int(monthly_instalment_amount)*int(txtbx14)
-    txtbx30=num2words(txtbx29) #total remaining amount in words
+    txtbx30=num2WordsModified(txtbx29) #total remaining amount in words
     txtbx31=monthly_instalment_amount
     txtbx32=int(term)-int(auction_instalment_no)
     txtbx33=no_of_executants
@@ -167,8 +167,6 @@ def RenderHTML(request):
     txtbx47=village
     txtbx48=sy_no_and_sy_sub_division_no
     txtbx49=area
-
-
 
     get_Person_1_Details=MemberDetails.objects.filter(member_number=mem_num_1).all()
     for mem in get_Person_1_Details:
@@ -259,6 +257,17 @@ def RenderHTML(request):
 
         person_5_post=mem.post
         person_5_pin=mem.pin
+    
+    if mem_num_1==0:
+        mem_num_1="******"
+    if mem_num_2==0:
+        mem_num_2="******"
+    if mem_num_3==0:
+        mem_num_3="******"
+    if mem_num_4==0:
+        mem_num_4="******"
+    if mem_num_5==0:
+        mem_num_5="******"
 
     loan_data={
         "year_in_words":year_in_words,
@@ -433,3 +442,9 @@ def RetrieveYearAndMonth(val):
     }
 
     return year_month_dict[val]
+
+def num2WordsModified(number):
+    wordString=num2words(number)
+    wordString=wordString.capitalize()
+    wordString=wordString+" only"
+    return wordString
