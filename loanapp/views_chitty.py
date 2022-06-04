@@ -6,6 +6,8 @@ from datetime import date
 from num2words import num2words
 
 def RenderHTML(request):
+    documentType=request.POST.get('documentType')
+
     if request.POST.get('person_1')!='':
         mem_num_1=request.POST.get('person_1')
     else:
@@ -390,8 +392,12 @@ def RenderHTML(request):
         "txtbx49":txtbx49
     }
 
+    # checking which button was clicked based on the button id/name.and then the corresponding html will be rendered.
     if 'bond' in request.POST:
-        template=get_template("chitty-agreement.html")
+        if documentType=='1':
+            template=get_template("chitty-agreement.html")
+        elif documentType=='2':
+            template=get_template("chitty-agreement-personel-guarentee.html")
     elif 'application' in request.POST:
         template=get_template("chitty-application.html")
     elif 'receipt' in request.POST:
@@ -407,6 +413,9 @@ def RenderHTML(request):
         template=get_template("chitty-promissory.html")
     elif 'promisory_note_4' in request.POST:
         loan_data['fromButton']='person4'
+        template=get_template("chitty-promissory.html")
+    elif 'promisory_note_5' in request.POST:
+        loan_data['fromButton']='person5'
         template=get_template("chitty-promissory.html")
 
     html=template.render(loan_data)

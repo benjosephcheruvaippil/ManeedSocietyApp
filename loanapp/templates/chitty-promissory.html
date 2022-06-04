@@ -114,6 +114,16 @@
                 $("#spnKara").append('{{person_4_kara}}');
                 $("#spnPin").append('{{person_4_pin}}');
              }
+             else if(fromButton=='person5'){
+                $("#spnPersonName").append('{{person_5_name}}');
+                $("#spnPersonMemNum").append('(');
+                $("#spnPersonMemNum").append('{{mem_num_5_type}}&nbsp;{{mem_num_5}}');
+                $("#spnPersonMemNum").append(')');
+                $("#spnHouseName").append('{{person_5_house}}');
+                $("#spnPost").append('{{person_5_post}}');
+                $("#spnKara").append('{{person_5_kara}}');
+                $("#spnPin").append('{{person_5_pin}}');
+             }
         
             window.print();
         });
