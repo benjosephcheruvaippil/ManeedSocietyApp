@@ -66,7 +66,11 @@
                 <tr>
                     <td>4</td>
                     <td>സംഘത്തിലെ	അംഗ നമ്പർ</td>
+                    {% if mem_num_1_type == "C" %}
                     <td colspan="3" style="font-weight:bold;">{{mem_num_1_type}}&nbsp;{{mem_num_1}}</td>
+                    {% else %}
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_1}}</td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td>5</td>
@@ -133,7 +137,12 @@
                 <tr>
                     <td></td>
                     <td style="text-align:right;">1.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_2_type}}&nbsp;{{mem_num_2}}</td> -->
+                    {% if mem_num_2_type == "C" %}
                     <td colspan="3" style="font-weight:bold;">{{mem_num_2_type}}&nbsp;{{mem_num_2}}</td>
+                    {% else %}
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_2}}</td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td></td>
@@ -162,7 +171,12 @@
                 <tr>
                     <td></td>
                     <td style="text-align:right;">2.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_3_type}}&nbsp;{{mem_num_3}}</td> -->
+                    {% if mem_num_3_type == "C" %}
                     <td colspan="3" style="font-weight:bold;">{{mem_num_3_type}}&nbsp;{{mem_num_3}}</td>
+                    {% else %}
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_3}}</td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td></td>
@@ -191,7 +205,12 @@
                 <tr>
                     <td></td>
                     <td style="text-align:right;">3.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_4_type}}&nbsp;{{mem_num_4}}</td> -->
+                    {% if mem_num_4_type == "C" %}
                     <td colspan="3" style="font-weight:bold;">{{mem_num_4_type}}&nbsp;{{mem_num_4}}</td>
+                    {% else %}
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_4}}</td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td></td>
@@ -220,7 +239,13 @@
                 <tr>
                     <td></td>
                     <td style="text-align:right;">4.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_5_type}}&nbsp;{{mem_num_5}}</td> -->
+
+                    {% if mem_num_5_type == "C" %}
                     <td colspan="3" style="font-weight:bold;">{{mem_num_5_type}}&nbsp;{{mem_num_5}}</td>
+                    {% else %}
+                    <td colspan="3" style="font-weight:bold;">{{mem_num_5}}</td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td></td>
@@ -251,25 +276,25 @@
             <p>സ്ഥലം: Ezhakkaranad</p>
             <p>തിയതി ………../…………/………………</p>
             <table class="center">
-                <tr>
+                <tr style="line-height:35px ;">
                     <td>1-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
-                    <td style="font-weight:bold;">&nbsp;{{person_1_name}}</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_1_name}}</td>
                 </tr>
-                <tr>
+                <tr style="line-height:35px ;">
                     <td>2-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
-                    <td style="font-weight:bold;">&nbsp;{{person_2_name}}</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_2_name}}</td>
                 </tr>
-                <tr>
+                <tr style="line-height:35px ;">
                     <td>3-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
-                    <td style="font-weight:bold;">&nbsp;{{person_3_name}}</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_3_name}}</td>
                 </tr>
-                <tr>
+                <tr style="line-height:35px ;">
                     <td>4-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
-                    <td style="font-weight:bold;">&nbsp;{{person_4_name}}</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_4_name}}</td>
                 </tr>
-                <tr>
+                <tr style="line-height:35px ;">
                     <td>5-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
-                    <td style="width:400px;font-weight:bold;">&nbsp;{{person_5_name}}</td>
+                    <td style="width:400px;font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_5_name}}</td>
                 </tr>
             </table>
             <p>സെക്രട്ടറിയുടെ അഭിപ്രായം:</p>

@@ -47,7 +47,12 @@
                 <tr>
                     <td style="width: 30px;">സ്ഥലം:Ezhakkaranad</td>
                     <td>പേര് : </td>
+                    <!-- <td>{{person_1_name}}&nbsp;&nbsp;({{mem_num_1_type}}&nbsp;{{mem_num_1}})</td> -->
+                    {% if mem_num_1_type == "C" %}
                     <td>{{person_1_name}}&nbsp;&nbsp;({{mem_num_1_type}}&nbsp;{{mem_num_1}})</td>
+                    {% else %}
+                    <td>{{person_1_name}}&nbsp;&nbsp;({{mem_num_1}})</td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

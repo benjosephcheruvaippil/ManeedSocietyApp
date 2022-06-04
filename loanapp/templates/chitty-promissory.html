@@ -77,7 +77,14 @@
              if(fromButton=='person1'){
                 $("#spnPersonName").append('{{person_1_name}}');
                 $("#spnPersonMemNum").append('(');
+
+                if('{{mem_num_1_type}}'=="C"){
                 $("#spnPersonMemNum").append('{{mem_num_1_type}}&nbsp;{{mem_num_1}}');
+                }
+                else{
+                    $("#spnPersonMemNum").append('{{mem_num_1}}');
+                }
+
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_1_house}}');
                 $("#spnPost").append('{{person_1_post}}');
@@ -87,7 +94,14 @@
              else if(fromButton=='person2'){
                 $("#spnPersonName").append('{{person_2_name}}');
                 $("#spnPersonMemNum").append('(');
+
+                if('{{mem_num_2_type}}'=="C"){
                 $("#spnPersonMemNum").append('{{mem_num_2_type}}&nbsp;{{mem_num_2}}');
+                }
+                else{
+                    $("#spnPersonMemNum").append('{{mem_num_2}}');
+                }
+
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_2_house}}');
                 $("#spnPost").append('{{person_2_post}}');
@@ -97,7 +111,14 @@
              else if(fromButton=='person3'){
                 $("#spnPersonName").append('{{person_3_name}}');
                 $("#spnPersonMemNum").append('(');
+
+                if('{{mem_num_3_type}}'=="C"){
                 $("#spnPersonMemNum").append('{{mem_num_3_type}}&nbsp;{{mem_num_3}}');
+                }
+                else{
+                    $("#spnPersonMemNum").append('{{mem_num_3}}');
+                }
+
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_3_house}}');
                 $("#spnPost").append('{{person_3_post}}');
@@ -107,7 +128,14 @@
              else if(fromButton=='person4'){
                 $("#spnPersonName").append('{{person_4_name}}');
                 $("#spnPersonMemNum").append('(');
+
+                if('{{mem_num_4_type}}'=="C"){
                 $("#spnPersonMemNum").append('{{mem_num_4_type}}&nbsp;{{mem_num_4}}');
+                }
+                else{
+                    $("#spnPersonMemNum").append('{{mem_num_4}}');
+                }
+
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_4_house}}');
                 $("#spnPost").append('{{person_4_post}}');
@@ -117,7 +145,14 @@
              else if(fromButton=='person5'){
                 $("#spnPersonName").append('{{person_5_name}}');
                 $("#spnPersonMemNum").append('(');
+
+                if('{{mem_num_5_type}}'=="C"){
                 $("#spnPersonMemNum").append('{{mem_num_5_type}}&nbsp;{{mem_num_5}}');
+                }
+                else{
+                    $("#spnPersonMemNum").append('{{mem_num_5}}');
+                }
+
                 $("#spnPersonMemNum").append(')');
                 $("#spnHouseName").append('{{person_5_house}}');
                 $("#spnPost").append('{{person_5_post}}');
