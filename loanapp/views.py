@@ -47,9 +47,9 @@ def home_view(request):
                         if not cell_obj.value:
                             insertFlag=0
                             break
-                        dict_car['member_number']=cell_obj.value.trim()
+                        dict_car['member_number']=cell_obj.value
                     if c+1==3:
-                        dict_car['member_type']=cell_obj.value.trim()
+                        dict_car['member_type']=cell_obj.value
                     if c+1==4:
                         dict_car['name']=cell_obj.value
                     if c+1==5:
