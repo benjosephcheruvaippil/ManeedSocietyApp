@@ -47,9 +47,9 @@ def home_view(request):
                         if not cell_obj.value:
                             insertFlag=0
                             break
-                        dict_car['member_number']=cell_obj.value
+                        dict_car['member_number']=cell_obj.value.trim()
                     if c+1==3:
-                        dict_car['member_type']=cell_obj.value
+                        dict_car['member_type']=cell_obj.value.trim()
                     if c+1==4:
                         dict_car['name']=cell_obj.value
                     if c+1==5:
@@ -80,13 +80,15 @@ def home_view(request):
                         dict_car['age']=cell_obj.value
                     if c+1==18:
                         dict_car['aadhar']=cell_obj.value
+                    if c+1==19:
+                        dict_car['occupation']=cell_obj.value
                     
             if r!=0 and insertFlag!=0:
                 member_data=MemberDetails.objects.create(
                     member_number=dict_car['member_number'],member_type=dict_car['member_type'],name=dict_car['name'],sex=dict_car['sex'],
                     father_husband_name=dict_car['father_husband_name'],house_name=dict_car['house_name'],kara=dict_car['kara'],post=dict_car['post'],pin=dict_car['pin'],
                     village=dict_car['village'],taluk=dict_car['taluk'],panchayath=dict_car['panchayath'],ward=dict_car['ward'],
-                    mobile_number=dict_car['mobile_number'],dob=dict_car['dob'],age=dict_car['age'],aadhar=dict_car['aadhar'],
+                    mobile_number=dict_car['mobile_number'],dob=dict_car['dob'],age=dict_car['age'],aadhar=dict_car['aadhar'],occupation=dict_car['occupation']
                 )   
                 print("Member Data",member_data)    
 

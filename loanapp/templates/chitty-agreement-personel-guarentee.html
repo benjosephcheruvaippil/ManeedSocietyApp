@@ -40,11 +40,37 @@
                 <p>............/........../................... {{year_in_words}} ആണ്ട് ............................ മാസം ..........................-)൦ തീയതി  മുവാറ്റുപുഴ താലൂക്ക് മണീട് വില്ലേജ് ഏഴക്കരനാട് കരയിൽ ആഫീസ് സ്ഥാപിച്ചു പ്രവർത്തിച്ചുവരുന്ന ഇ- 1358-)൦  നമ്പർ മണീട് പഞ്ചായത്ത് ഗ്രാമീണ സഹകരണ സംഘം ക്ലിപ്‌തത്തിന് വേണ്ടി ടി സംഘത്തിൻറെ ഓണററി സെക്രട്ടറി മുവാറ്റുപുഴ താലൂക്ക് മണീട് വില്ലേജ് നീർക്കുഴി കരയിൽ അണ്ണാങ്കുഴിയിൽ വീട്ടിൽ എ. എസ്. ദാമോദരൻ മകൻ എ.ഡി. ഗോപി പേർക്ക്,</p>
             </div>
             <div>
+                
+                {% if mem_num_1_type == "C" %}
+                <p>1.	ടി സംഘത്തിലെ {{mem_num_1_type}}&nbsp;{{mem_num_1}} )൦  നമ്പർ അംഗം {{person_1_taluk}} താലൂക്ക് {{person_1_village}} വില്ലേജ് {{person_1_kara}} കരയിൽ {{person_1_house}} വീട്ടിൽ {{person_1_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_1_age}} വയസ്സ് {{person_1_name}} </p>
+                {% else %}
                 <p>1.	ടി സംഘത്തിലെ {{mem_num_1}} )൦  നമ്പർ അംഗം {{person_1_taluk}} താലൂക്ക് {{person_1_village}} വില്ലേജ് {{person_1_kara}} കരയിൽ {{person_1_house}} വീട്ടിൽ {{person_1_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_1_age}} വയസ്സ് {{person_1_name}} </p>
+                {% endif %}
+
+                {% if mem_num_2_type == "C" %}
+                <p>2.	ടി സംഘത്തിലെ {{mem_num_2_type}}&nbsp;{{mem_num_2}} )൦  നമ്പർ അംഗം {{person_2_taluk}} താലൂക്ക് {{person_2_village}} വില്ലേജ് {{person_2_kara}} കരയിൽ {{person_2_house}} വീട്ടിൽ {{person_2_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_2_age}} വയസ്സ് {{person_2_name}} </p>
+                {% else %}
                 <p>2.	ടി സംഘത്തിലെ {{mem_num_2}} )൦  നമ്പർ അംഗം {{person_2_taluk}} താലൂക്ക് {{person_2_village}} വില്ലേജ് {{person_2_kara}} കരയിൽ {{person_2_house}} വീട്ടിൽ {{person_2_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_2_age}} വയസ്സ് {{person_2_name}} </p>
+                {% endif %}
+
+                {% if mem_num_3_type == "C" %}
+                <p>3.	ടി സംഘത്തിലെ {{mem_num_3_type}}&nbsp;{{mem_num_3}} )൦  നമ്പർ അംഗം {{person_3_taluk}} താലൂക്ക് {{person_3_village}} വില്ലേജ് {{person_3_kara}} കരയിൽ {{person_3_house}} വീട്ടിൽ {{person_3_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_3_age}} വയസ്സ് {{person_3_name}} </p>
+                {% else %}
                 <p>3.	ടി സംഘത്തിലെ {{mem_num_3}} )൦  നമ്പർ അംഗം {{person_3_taluk}} താലൂക്ക് {{person_3_village}} വില്ലേജ് {{person_3_kara}} കരയിൽ {{person_3_house}} വീട്ടിൽ {{person_3_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_3_age}} വയസ്സ് {{person_3_name}} </p>
+                {% endif %}
+
+                {% if mem_num_4_type == "C" %}
+                <p>4. 	ടി സംഘത്തിലെ {{mem_num_4_type}}&nbsp;{{mem_num_4}} )൦  നമ്പർ അംഗം {{person_4_taluk}} താലൂക്ക് {{person_4_village}} വില്ലേജ് {{person_4_kara}} കരയിൽ {{person_4_house}} വീട്ടിൽ {{person_4_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_4_age}} വയസ്സ് {{person_4_name}} </p>
+                {% else %}
                 <p>4. 	ടി സംഘത്തിലെ {{mem_num_4}} )൦  നമ്പർ അംഗം {{person_4_taluk}} താലൂക്ക് {{person_4_village}} വില്ലേജ് {{person_4_kara}} കരയിൽ {{person_4_house}} വീട്ടിൽ {{person_4_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_4_age}} വയസ്സ് {{person_4_name}} </p>
+                {% endif %}
+
+                {% if mem_num_5_type == "C" %}
+                <p>5. 	ടി സംഘത്തിലെ {{mem_num_5_type}}&nbsp;{{mem_num_5}} )൦  നമ്പർ അംഗം {{person_5_taluk}} താലൂക്ക് {{person_5_village}} വില്ലേജ് {{person_5_kara}} കരയിൽ {{person_5_house}} വീട്ടിൽ {{person_5_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_5_age}} വയസ്സ് {{person_5_name}} </p>
+                {% else %}
                 <p>5. 	ടി സംഘത്തിലെ {{mem_num_5}} )൦  നമ്പർ അംഗം {{person_5_taluk}} താലൂക്ക് {{person_5_village}} വില്ലേജ് {{person_5_kara}} കരയിൽ {{person_5_house}} വീട്ടിൽ {{person_5_father_husband}} മകൻ/മകൾ/ഭാര്യ {{person_5_age}} വയസ്സ് {{person_5_name}} </p>
+                {% endif %}
+                
                 <p>എന്നിവർ കൂടി ഏകോപിച്ച് എഴുതിക്കൊടുത്ത ജാമ്യ ഉടമ്പടി:</p>
             </div>
             <div>

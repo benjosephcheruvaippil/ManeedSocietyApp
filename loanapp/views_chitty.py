@@ -8,6 +8,12 @@ from num2words import num2words
 def RenderHTML(request):
     documentType=request.POST.get('documentType')
 
+    mem_type_1=request.POST.get('person1_class_type')
+    mem_type_2=request.POST.get('person2_class_type')
+    mem_type_3=request.POST.get('person3_class_type')
+    mem_type_4=request.POST.get('person4_class_type')
+    mem_type_5=request.POST.get('person5_class_type')
+
     if request.POST.get('person_1')!='':
         mem_num_1=request.POST.get('person_1')
     else:
@@ -48,6 +54,7 @@ def RenderHTML(request):
     person_1_gender=""
     person_1_post=""
     person_1_pin=""
+    person_1_occupation=""
 
     mem_num_2_type=""
     person_2_name=""
@@ -96,8 +103,7 @@ def RenderHTML(request):
     person_5_gender=""
     person_5_post=""
     person_5_pin=""
-
-    person_1_occupation=request.POST.get('person_1_occupation')
+    
     mds_no=request.POST.get('mds_no')
     monthly_instalment_amount=request.POST.get('monthly_instalment_amount')
     term=request.POST.get('term')
@@ -170,7 +176,7 @@ def RenderHTML(request):
     txtbx48=sy_no_and_sy_sub_division_no
     txtbx49=area
 
-    get_Person_1_Details=MemberDetails.objects.filter(member_number=mem_num_1).all()
+    get_Person_1_Details=MemberDetails.objects.filter(member_number=mem_num_1,member_type=mem_type_1).all()
     for mem in get_Person_1_Details:
         mem_num_1_type=mem.member_type
         person_1_name=mem.name
@@ -187,8 +193,9 @@ def RenderHTML(request):
         
         person_1_post=mem.post
         person_1_pin=mem.pin
+        person_1_occupation=mem.occupation
     
-    get_Person_2_Details=MemberDetails.objects.filter(member_number=mem_num_2).all()
+    get_Person_2_Details=MemberDetails.objects.filter(member_number=mem_num_2,member_type=mem_type_2).all()
     for mem in get_Person_2_Details:
         mem_num_2_type=mem.member_type
         person_2_name=mem.name
@@ -206,7 +213,7 @@ def RenderHTML(request):
         person_2_post=mem.post
         person_2_pin=mem.pin
     
-    get_Person_3_Details=MemberDetails.objects.filter(member_number=mem_num_3).all()
+    get_Person_3_Details=MemberDetails.objects.filter(member_number=mem_num_3,member_type=mem_type_3).all()
     for mem in get_Person_3_Details:
         mem_num_3_type=mem.member_type
         person_3_name=mem.name
@@ -224,7 +231,7 @@ def RenderHTML(request):
         person_3_post=mem.post
         person_3_pin=mem.pin
     
-    get_Person_4_Details=MemberDetails.objects.filter(member_number=mem_num_4).all()
+    get_Person_4_Details=MemberDetails.objects.filter(member_number=mem_num_4,member_type=mem_type_4).all()
     for mem in get_Person_4_Details:
         mem_num_4_type=mem.member_type
         person_4_name=mem.name
@@ -242,7 +249,7 @@ def RenderHTML(request):
         person_4_post=mem.post
         person_4_pin=mem.pin
     
-    get_Person_5_Details=MemberDetails.objects.filter(member_number=mem_num_5).all()
+    get_Person_5_Details=MemberDetails.objects.filter(member_number=mem_num_5,member_type=mem_type_5).all()
     for mem in get_Person_5_Details:
         mem_num_5_type=mem.member_type
         person_5_name=mem.name

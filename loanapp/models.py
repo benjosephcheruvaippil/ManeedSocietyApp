@@ -24,3 +24,4 @@ class MemberDetails(models.Model):
     dob=models.DateField(null=True,default=date.today)
     age=models.IntegerField(null=True,default=0)
     aadhar=models.CharField(null=True,max_length=300,default="")
+    occupation=models.CharField(null=True,max_length=300,default="")
