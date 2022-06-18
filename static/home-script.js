@@ -13,7 +13,7 @@ function openCity(evt, cityName) {
   }
 
 function RemoveLocalStorageItems(){
-  localStorage.removeItem('historyFlag') 
+  localStorage.removeItem('historyFlag');
 }
 
 
@@ -67,49 +67,49 @@ $(document).ready(function(){
       var applicationbutton = document.getElementById("application");
       setTimeout(function(){
         applicationbutton.click();
-        }, 2000);
+        }, 1000);
     }
     
     if(historyFlag=="2"){
       var receiptbutton = document.getElementById("receipt");
       setTimeout(function(){
         receiptbutton.click();
-        }, 2000);
+        }, 1000);
     }
   
     if(historyFlag=="3"){
       var note1button = document.getElementById("promisory_note_1");
       setTimeout(function(){
         note1button.click();
-        }, 2000);
+        }, 1000);
     }
   
     if(historyFlag=="4"){
       var note2button = document.getElementById("promisory_note_2");
       setTimeout(function(){
         note2button.click();
-        }, 2000);
+        }, 1000);
     }
   
     if(historyFlag=="5"){
       var note3button = document.getElementById("promisory_note_3");
       setTimeout(function(){
         note3button.click();
-        }, 2000);
+        }, 1000);
     }
   
     if(historyFlag=="6"){
       var note4button = document.getElementById("promisory_note_4");
       setTimeout(function(){
         note4button.click();
-        }, 2000);
+        }, 1000);
     }
   
     if(historyFlag=="7"){
       var note5button = document.getElementById("promisory_note_5");
       setTimeout(function(){
         note5button.click();
-        }, 2000);
+        }, 1000);
     }
   }
-})
+});

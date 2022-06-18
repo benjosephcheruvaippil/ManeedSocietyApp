@@ -74,8 +74,12 @@
                 <p>&nbsp;</p>
                 <table>
                     <tr>
+                        {% if person_1_name != "" %}
                         <td style="width: 400px;">1.&emsp;{{person_1_name}}</td>
+                        {% endif %}
+                        {% if person_2_name != "" %}
                         <td>2.&emsp;{{person_2_name}}</td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
@@ -84,8 +88,12 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
+                        {% if person_3_name != "" %}
                         <td style="width: 400px;">3.&emsp;{{person_3_name}}</td>
+                        {% endif %}
+                        {% if person_4_name != "" %}
                         <td>4.&emsp;{{person_4_name}}</td>
+                        {% endif %}
                     </tr>
                 </table>
               
@@ -147,25 +155,33 @@
                 <p>&nbsp;</p>
 
                 <table>
+                    {% if person_1_name != "" %}
                     <tr>
                         <td style="width: 450px;">1-)o കക്ഷി, പേര്&emsp;{{person_1_name}}</td>
                         <td>ഒപ്പ്...............................................</td>
                     </tr>
+                    {% endif %}
                     <tr><td>&nbsp;</td></tr>
+                    {% if person_2_name != "" %}
                     <tr>
                         <td>2-)o കക്ഷി, പേര്&emsp;{{person_2_name}}</td>
                         <td>ഒപ്പ്...............................................</td>
                     </tr>
+                    {% endif %}
                     <tr><td>&nbsp;</td></tr>
+                    {% if person_3_name != "" %}
                     <tr>
                         <td>3-)o കക്ഷി, പേര്&emsp;{{person_3_name}}</td>
                         <td>ഒപ്പ്...............................................</td>
                     </tr>
+                    {% endif %}
                     <tr><td>&nbsp;</td></tr>
+                    {% if person_4_name != "" %}
                     <tr>
                         <td>4-)o കക്ഷി, പേര്&emsp;{{person_4_name}}</td>
                         <td>ഒപ്പ്...............................................</td>
                     </tr>
+                    {% endif %}
                 </table>
 
                 <p>&nbsp;</p>
