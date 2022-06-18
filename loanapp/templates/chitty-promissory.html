@@ -4,6 +4,8 @@
     <head>
         <meta content="charset=utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- HTML2PDF cdn is attached below -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
         <style>
            * {
            box-sizing: border-box;
@@ -25,6 +27,7 @@
         </style>
      </head>
      <body>
+        <div id="contentDiv">
          <div style="text-align: center;font-size: large;text-decoration: underline;">
              <p>പ്രോമിസ്സറി നോട്ട്</p>
          </div>
@@ -71,6 +74,7 @@
                
            </table>
         </div>
+        </div>
      </body>
      <script>
         $(document).ready(function(){
@@ -92,6 +96,12 @@
                 $("#spnPost").append('{{person_1_post}}');
                 $("#spnKara").append('{{person_1_kara}}');
                 $("#spnPin").append('{{person_1_pin}}');
+
+                createPDF('Chitty-PromissoryNote1');
+                setTimeout(function(){
+                    localStorage.setItem('historyFlag','4');
+                    history.back();
+                }, 3000);
              }
              else if(fromButton=='person2'){
                 $("#spnPersonName").append('{{person_2_name}}');
@@ -109,6 +119,12 @@
                 $("#spnPost").append('{{person_2_post}}');
                 $("#spnKara").append('{{person_2_kara}}');
                 $("#spnPin").append('{{person_2_pin}}');
+
+                createPDF('Chitty-PromissoryNote2');
+                setTimeout(function(){
+                    localStorage.setItem('historyFlag','5');
+                    history.back();
+                }, 3000);
              }
              else if(fromButton=='person3'){
                 $("#spnPersonName").append('{{person_3_name}}');
@@ -126,6 +142,12 @@
                 $("#spnPost").append('{{person_3_post}}');
                 $("#spnKara").append('{{person_3_kara}}');
                 $("#spnPin").append('{{person_3_pin}}');
+
+                createPDF('Chitty-PromissoryNote3');
+                setTimeout(function(){
+                    localStorage.setItem('historyFlag','6');
+                    history.back();
+                }, 3000);
              }
              else if(fromButton=='person4'){
                 $("#spnPersonName").append('{{person_4_name}}');
@@ -143,6 +165,12 @@
                 $("#spnPost").append('{{person_4_post}}');
                 $("#spnKara").append('{{person_4_kara}}');
                 $("#spnPin").append('{{person_4_pin}}');
+
+                createPDF('Chitty-PromissoryNote4');
+                setTimeout(function(){
+                    localStorage.setItem('historyFlag','7');
+                    history.back();
+                }, 3000);
              }
              else if(fromButton=='person5'){
                 $("#spnPersonName").append('{{person_5_name}}');
@@ -160,9 +188,27 @@
                 $("#spnPost").append('{{person_5_post}}');
                 $("#spnKara").append('{{person_5_kara}}');
                 $("#spnPin").append('{{person_5_pin}}');
+
+                createPDF('Chitty-PromissoryNote5');
+                setTimeout(function(){
+                    localStorage.setItem('historyFlag','8');
+                    history.back();
+                }, 2000);
              }
         
-            window.print();
+            //window.print();
+
+            function createPDF(nameOfFile) {
+                var pdf = document.getElementById("contentDiv");
+                var opt = {
+                    margin: 1,
+                    filename: nameOfFile,
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas:  { scale: 6,dpi: 300,letterRendering: true },
+                    jsPDF: { unit: 'cm', format: 'legal', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(pdf).save();
+            }
         });
      </script>
 </html>

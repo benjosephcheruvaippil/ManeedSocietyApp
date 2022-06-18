@@ -4,6 +4,8 @@
     <head>
         <meta content="charset=utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- HTML2PDF cdn is attached below -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
         <style>
            * {
            box-sizing: border-box;
@@ -30,6 +32,7 @@
         </style>
      </head>
      <body>
+        <div id="contentDiv">
          <div style="text-align: center;font-size: large;text-decoration: underline;">
              <p>രസീത്</p>
          </div>
@@ -69,13 +72,29 @@
                 </tr>
             </table>
          </div>
+        </div>
      </body>
      <script>
-        $(document).ready(function(){
+        $(document).ready(function(){   
+            //window.print();
+
+            createPDF();
+            setTimeout(function(){
+                localStorage.setItem('historyFlag','3');
+                history.back();
+            }, 2000);
             
-            
-        
-            window.print();
+            function createPDF() {
+                var pdf = document.getElementById("contentDiv");
+                var opt = {
+                    margin: 1,
+                    filename: 'chitty-receipt.pdf',
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas:  { scale: 6,dpi: 300,letterRendering: true },
+                    jsPDF: { unit: 'cm', format: 'legal', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(pdf).save();
+            }
         });
      </script>
 </html>

@@ -16,7 +16,7 @@
   </div>
 
  <div align="right">
-  <span style="text-align: right;"><h2><a class="btn btn-primary" href="/logout">Logout</a></h2></span>
+  <span style="text-align: right;"><h2><a class="btn btn-primary" onclick='return RemoveLocalStorageItems()' href="/logout">Logout</a></h2></span>
  </div>
 
 </div>
@@ -79,7 +79,7 @@
       </tr>
       <tr>
         <td><label>PERSON 1</label></td>
-        <td style="width:300px ;"><input type="text" name="person_1" placeholder="Person 1" required>
+        <td style="width:300px ;"><input type="text" name="person_1" id="person_1" placeholder="Person 1" required>
           <select id="person1_class_type" name="person1_class_type">
             <option value="A">A-Class</option>
             <option value="C">C-Class</option>
@@ -88,7 +88,7 @@
       </tr>
       <tr>
         <td><label>PERSON 2</label></td>
-        <td><input type="text" name="person_2" placeholder="Person 2">
+        <td><input type="text" name="person_2" id="person_2" placeholder="Person 2">
           <select id="person2_class_type" name="person2_class_type">
             <option value="A">A-Class</option>
             <option value="C">C-Class</option>
@@ -97,7 +97,7 @@
       </tr>
       <tr>
         <td><label>PERSON 3</label></td>
-        <td><input type="text" name="person_3" placeholder="Person 3">
+        <td><input type="text" name="person_3" id="person_3" placeholder="Person 3">
           <select id="person3_class_type" name="person3_class_type">
             <option value="A">A-Class</option>
             <option value="C">C-Class</option>
@@ -106,7 +106,7 @@
       </tr>
       <tr>
         <td><label>PERSON 4</label></td>
-        <td><input type="text" name="person_4" placeholder="Person 4">
+        <td><input type="text" name="person_4" id="person_4" placeholder="Person 4">
           <select id="person4_class_type" name="person4_class_type">
             <option value="A">A-Class</option>
             <option value="C">C-Class</option>
@@ -115,7 +115,7 @@
       </tr>
       <tr>
         <td><label>PERSON 5</label></td>
-        <td><input type="text" name="person_5" placeholder="Person 5">
+        <td><input type="text" name="person_5" id="person_5" placeholder="Person 5">
           <select id="person5_class_type" name="person5_class_type">
             <option value="A">A-Class</option>
             <option value="C">C-Class</option>
@@ -124,92 +124,93 @@
       </tr>
       <tr>
         <td><label>MDS NO.</label></td>
-        <td><input type="text" name="mds_no" placeholder="mds_no" required></td>
+        <td><input type="text" name="mds_no" id="mds_no" placeholder="mds_no" required></td>
       </tr>
       <tr>
         <td><label>MONTHLY INSTALMENT AMOUNT</label></td>
-        <td><input type="number" name="monthly_instalment_amount" size="30" placeholder="monthly_instalment_amount" required></td>
+        <td><input type="number" name="monthly_instalment_amount" id="monthly_instalment_amount" size="30" placeholder="monthly_instalment_amount" required></td>
       </tr>
       <tr>
         <td><label>TOTAL INSTALLMENT</label></td>
-        <td><input type="number" name="term" placeholder="term" required></td>
+        <td><input type="number" name="term" id="term" placeholder="term" required></td>
       </tr>
       <tr>
         <td><label>TOTAL AMOUNT</label></td>
-        <td><input type="number" name="total_amount" placeholder="total_amount" required></td>
+        <td><input type="number" name="total_amount" id="total_amount" placeholder="total_amount" required></td>
       </tr>
       <tr>
         <td><label>CHITTAL NO</label></td>
-        <td><input type="text" name="chittal_no" placeholder="chittal_no" required></td>
+        <td><input type="text" name="chittal_no" id="chittal_no" placeholder="chittal_no" required></td>
       </tr>
       <tr>
         <td><label>AUCTION INSTALMENT.NO</label></td>
-        <td><input type="number" name="auction_instalment_no" placeholder="auction_instalment_no" required></td>
+        <td><input type="number" name="auction_instalment_no" id="auction_instalment_no" placeholder="auction_instalment_no" required></td>
       </tr>
       <tr>
         <td><label>AUCTION DATE</label></td>
-        <td><input type="text" name="auction_date" placeholder="auction_date" required></td>
+        <td><input type="text" name="auction_date" id="auction_date" placeholder="auction_date" required></td>
       </tr>
       <tr>
         <td><label>LESS CALLED AMOUNT</label></td>
-        <td><input type="number" name="less_called_amount" placeholder="less_called_amount" required></td>
+        <td><input type="number" name="less_called_amount" id="less_called_amount" placeholder="less_called_amount" required></td>
       </tr>
       <tr>
         <td><label>SRO</label></td>
-        <td><input type="text" name="sro" value="Piravom" placeholder="sro" required></td>
+        <td><input type="text" name="sro" id="sro" value="Piravom" placeholder="sro" required></td>
       </tr>
       <tr>
         <td><label>LAND DOCUMENT NO</label></td>
-        <td><input type="text" name="land_document_no" placeholder="land_document_no" required></td>
+        <td><input type="text" name="land_document_no" id="land_document_no" placeholder="land_document_no" required></td>
       </tr>
       <tr>
         <td><label>NO OF EXECUTANTS</label></td>
-        <td><input type="text" name="no_of_executants" placeholder="no_of_executants" required></td>
+        <td><input type="text" name="no_of_executants" id="no_of_executants" placeholder="no_of_executants" required></td>
       </tr>
       <tr>
         <td><label>DATE OF INSTALMENT</label></td>
-        <td><input type="text" name="date_of_instalment" placeholder="date_of_instalment" required></td>
+        <td><input type="text" name="date_of_instalment" id="date_of_instalment" placeholder="date_of_instalment" required></td>
       </tr>
       <tr>
         <td><label>PROPERTY OWNER ( SPECIFY NO)</label></td>
-        <td><input type="text" name="property_owner_specify_no" size="30" placeholder="property_owner_specify_no" required></td>
+        <td><input type="text" name="property_owner_specify_no" id="property_owner_specify_no" size="30" placeholder="property_owner_specify_no" required></td>
       </tr>
       <tr>
         <td><label>DISTRICT</label></td>
-        <td><input type="text" name="district" value="Ernakulam" placeholder="district" required></td>
+        <td><input type="text" name="district" id="district" value="Ernakulam" placeholder="district" required></td>
       </tr>
       <tr>
         <td><label>SUB DISTRICT</label></td>
-        <td><input type="text" name="sub_district" value="Piravom" placeholder="sub_district" required></td>
+        <td><input type="text" name="sub_district" id="sub_district" value="Piravom" placeholder="sub_district" required></td>
       </tr>
       <tr>
         <td><label>TALUK</label></td>
-        <td><input type="text" name="taluk" value="Muvattupuzha" placeholder="taluk" required></td>
+        <td><input type="text" name="taluk" id="taluk" value="Muvattupuzha" placeholder="taluk" required></td>
       </tr>
       <tr>
         <td><label>VILLAGE</label></td>
-        <td><input type="text" name="village" value="Maneed" placeholder="village" required></td>
+        <td><input type="text" name="village" id="village" value="Maneed" placeholder="village" required></td>
       </tr>
       <tr>
         <td><label>KARA</label></td>
-        <td><input type="text" name="kara" placeholder="kara" required></td>
+        <td><input type="text" name="kara" id="kara" placeholder="kara" required></td>
       </tr>
       <tr>
         <td><label>SY.NO. & SY.SUB DIVISION.NO</label></td>
-        <td><input type="text" name="sy_no_and_sy_sub_division_no" size="30" placeholder="sy_no_and_sy_sub_division_no" required></td>
+        <td><input type="text" name="sy_no_and_sy_sub_division_no" id="sy_no_and_sy_sub_division_no" size="30" placeholder="sy_no_and_sy_sub_division_no" required></td>
       </tr>
       <tr>
         <td><label>RE.SY.NO.</label></td>
-        <td><input type="text" name="re_sy_no" placeholder="re_sy_no"></td>
+        <td><input type="text" name="re_sy_no" id="re_sy_no" placeholder="re_sy_no"></td>
       </tr>
       <tr>
         <td><label>AREA</label></td>
-        <td><input type="text" name="area" placeholder="area" required></td>
+        <td><input type="text" name="area" id="area" placeholder="area" required></td>
       </tr>
     </table>
 
     <p>
-      <input type="submit" name="bond" value="Generate Bond">
+      <input type="button" id="setvalues" name="setvalues" value="Set Values">
+      <input type="submit" name="bond" value="Generate Documents">
       <input type="submit" name="application" value="Generate Application">
       <input type="submit" name="receipt" value="Generate Receipt">
       <input type="submit" name="promisory_note_1" value="Promisory Note 1">

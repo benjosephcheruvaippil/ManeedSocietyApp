@@ -4,6 +4,8 @@
    <head>
       <meta content="charset=utf-8">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- HTML2PDF cdn is attached below -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
       <style>
          * {
          box-sizing: border-box;
@@ -25,7 +27,7 @@
       </style>
    </head>
    <body>
-      <div style="text-align: center;">
+      <div style="text-align: center;" id="contentDiv">
          <div>
             <p style="font-weight: 600;">മണീട് പഞ്ചായത്ത് ഗ്രാമീണ സഹകരണ സംഘം ക്ലിപ്‌തം നമ്പർ ഇ –1358
                   
@@ -199,7 +201,27 @@
               $("#spnVaypaNumber").append("..............");
           }
       
-          window.print();
+          //window.print();
+
+          createPDF();
+            setTimeout(function(){
+                localStorage.setItem('historyFlag','1');
+                history.back();
+            }, 2000);
+            
+            
+
+            function createPDF() {
+                var pdf = document.getElementById("contentDiv");
+                var opt = {
+                    margin: 1,
+                    filename: 'chitty-bond-property.pdf',
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas:  { scale: 6,dpi: 300,letterRendering: true },
+                    jsPDF: { unit: 'cm', format: 'legal', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(pdf).save();
+            }
       });
    </script>
 </html>
