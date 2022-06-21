@@ -18,6 +18,11 @@ function RemoveLocalStorageItems(){
 
 
 $(document).ready(function(){
+
+  $("#bond").click(function(){
+    $("#total_amount").val(($("#monthly_instalment_amount").val())*($("#term").val()));
+  });
+
   $("#setvalues").click(function(){
     $("#documentType").val("1");
     $("#person1_class_type").val("A");
@@ -35,7 +40,7 @@ $(document).ready(function(){
     $("#mds_no").val("MDS-001");
     $("#monthly_instalment_amount").val("4000");
     $("#term").val("5");
-    $("#total_amount").val("60000");
+    //$("#total_amount").val("60000");
     $("#chittal_no").val("CGJ-45");
     $("#auction_instalment_no").val("9");
     $("#auction_date").val("12/12/2021");
