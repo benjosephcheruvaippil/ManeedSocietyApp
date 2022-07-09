@@ -116,5 +116,12 @@ $(document).ready(function(){
         note5button.click();
         }, 1000);
     }
+
+    if(historyFlag=="8"){
+      var note5button = document.getElementById("applicationproperty");
+      setTimeout(function(){
+        note5button.click();
+        }, 1000);
+    }
   }
 });

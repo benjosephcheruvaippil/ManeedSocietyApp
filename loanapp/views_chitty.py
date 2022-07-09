@@ -407,6 +407,8 @@ def RenderHTML(request):
             template=get_template("chitty-agreement-personel-guarentee.html")
     elif 'application' in request.POST:
         template=get_template("chitty-application.html")
+    elif 'applicationproperty' in request.POST:
+        template=get_template("chitty-application-property.html")
     elif 'receipt' in request.POST:
         template=get_template("chitty-receipt.html")
     elif 'promisory_note_1' in request.POST:

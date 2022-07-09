@@ -1,0 +1,377 @@
+{% load static %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta content="charset=utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- HTML2PDF cdn is attached below -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+        <style>
+           * {
+           box-sizing: border-box;
+           }
+           /* Create two equal columns that floats next to each other */
+           .column {
+           float: left;
+           width: 50%;
+           padding: 10px;
+           height: 30px; /* Should be removed. Only for demonstration */
+           }
+           /* Clear floats after the columns */
+           .row:after {
+           content: "";
+           display: table;
+           clear: both;
+           }
+
+           table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+
+            .center {
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+        </style>
+     </head>
+     <body style="font-size:smaller ;">
+        <div id="contentDiv">
+         <div style="text-align: center;">
+            <p style="font-weight: 600;">മണീട് പഞ്ചായത്ത് ഗ്രാമീണ കോ-ഓപ്പറേറ്റീവ് സൊസൈറ്റി ലിമിറ്റഡ് <br> നമ്പർ ഇ –1358 <br> ഏഴക്കരനാട്‌ പി ഒ , എറണാകുളം  ജില്ല, പിൻ -  682308</p>
+         </div>
+        <div>
+            <table class="center" style="font-size:smaller ;">
+                <tr>
+                    <td colspan="6" style="text-align:center ;">പ്രതിമാസ നിക്ഷേപ പദ്ധതി വായ്പ പണം അനുവദിക്കുന്നതിനുള്ള അപേക്ഷ</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>MDS നമ്പർ</td>
+                    <td colspan="4" style="font-weight:bold;">{{txtbx1}}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>MDS അംഗ നമ്പർ</td>
+                    <td colspan="4" style="font-weight:bold;">{{txtbx5}}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>പേര്</td>
+                    <td style="font-weight:bold;">{{person_1_name}}</td>
+                    <td>Gender</td>
+                    <td colspan="2">{{person_1_gender}}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>സംഘത്തിലെ	അംഗ നമ്പർ</td>
+                    {% if mem_num_1_type == "C" %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_1_type}}&nbsp;{{mem_num_1}}</td>
+                    {% else %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_1}}</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>പിതാവിൻറെ /ഭർത്താവിൻറെ പേര് </td>
+                    <td colspan="4">{{person_1_father_husband}}</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>സ്ഥിര മേൽവിലാസം</td>
+                    <td colspan="4">{{person_1_house}}&nbsp;(H)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{person_1_post}}&nbsp;P.O,{{person_1_kara}}</td>
+                    <td>Pin</td>
+                    <td colspan="2">{{person_1_pin}}</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>തൊഴിൽ</td>
+                    <td colspan="4">{{person_1_occupation}}</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>വയസ്</td>
+                    <td colspan="4">{{person_1_age}}</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>മൊത്ത സംഖ്യ</td>
+                    <td colspan="4">{{txtbx8}}/-</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>നറുക്കെടുത്ത തീയതി</td>
+                    <td colspan="4">{{txtbx7}}</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>തവണ</td>
+                    <td colspan="4">{{txtbx6}}</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>കമ്മീഷൻ ഉൾപ്പെടെ കുറഞ്ഞ സംഖ്യ</td>
+                    <td colspan="4">{{txtbx9}}/-</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>വായ്പ  സംഖ്യ</td>
+                    <td colspan="4">{{txtbx10}}/-</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>നൽകുന്ന ഈട്</td>
+                    <td colspan="4" style="font-weight:bold;">(1) PROPERTY DETAILS</td>
+                </tr>
+                <tr>
+                    <td colspan="6">............)൦ കക്ഷി വക ...............വില്ലേജിൽപ്പെടുന്നതും .............SRO യിലെ ..............)൦ നമ്പർ ആധാര പ്രകാരം സിദ്ധിച്ചിട്ടുള്ളതുമായ താഴെ പട്ടിക വസ്തുക്കൾ</td>
+                </tr>
+               
+
+
+                <tr>
+                    <td>1</td>
+                    <td>ജില്ല</td>
+                    <td>{{txtbx39}}</td>
+                    <td>5</td>
+                    <td>കര</td>
+                    <td>{{txtbx43}}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>സബ്ബ്ജില്ല</td>
+                    <td>{{txtbx40}}</td>
+                    <td>6</td>
+                    <td>സർവ്വേ നമ്പർ & സബ്ബ് നമ്പർ</td>
+                    <td>{{txtbx44}}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>താലൂക്ക്</td>
+                    <td>{{txtbx41}}</td>
+                    <td>7</td>
+                    <td>റീ സർവ്വേ നമ്പർ</td>
+                    <td>{{txtbx45}}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>വില്ലേജ്</td>
+                    <td>{{txtbx42}}</td>
+                    <td>8</td>
+                    <td>വിസ്തീർണ്ണം</td>
+                    <td>{{txtbx46}} ആർ</td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="6">.........വില്ലേജിൽ .........സർവ്വേനമ്പറിൽപ്പെട്ടതും മേൽ വിവരിക്കുന്നത് പ്രകാരമുള്ളതുമായ ......... വസ്തുവകകളും ചമയങ്ങളും.</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>ആൾ ജാമ്യമെങ്കിൽ ജാമ്യക്കാരുടെ,</td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">1.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_2_type}}&nbsp;{{mem_num_2}}</td> -->
+                    {% if mem_num_2_type == "C" %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_2_type}}&nbsp;{{mem_num_2}}</td>
+                    {% else %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_2}}</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പേര്</td>
+                    <td style="font-weight:bold;">{{person_2_name}}</td>
+                    <td>Gender</td>
+                    <td colspan="2">{{person_2_gender}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td colspan="4">{{person_2_father_husband}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
+                    <td colspan="4">{{person_2_house}}&nbsp;(H)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{person_2_post}}&nbsp;P.O,{{person_2_kara}}</td>
+                    <td>Pin</td>
+                    <td colspan="2">{{person_2_pin}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">2.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_3_type}}&nbsp;{{mem_num_3}}</td> -->
+                    {% if mem_num_3_type == "C" %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_3_type}}&nbsp;{{mem_num_3}}</td>
+                    {% else %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_3}}</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പേര്</td>
+                    <td style="font-weight:bold;">{{person_3_name}}</td>
+                    <td>Gender</td>
+                    <td colspan="2">{{person_3_gender}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td colspan="4">{{person_3_father_husband}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
+                    <td colspan="4">{{person_3_house}}&nbsp;(H)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{person_3_post}}&nbsp;P.O,{{person_3_kara}}</td>
+                    <td>Pin</td>
+                    <td colspan="2">{{person_3_pin}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">3.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_4_type}}&nbsp;{{mem_num_4}}</td> -->
+                    {% if mem_num_4_type == "C" %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_4_type}}&nbsp;{{mem_num_4}}</td>
+                    {% else %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_4}}</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പേര്</td>
+                    <td style="font-weight:bold;">{{person_4_name}}</td>
+                    <td>Gender</td>
+                    <td colspan="2">{{person_4_gender}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td colspan="4">{{person_4_father_husband}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
+                    <td colspan="4">{{person_4_house}}&nbsp;(H)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{person_4_post}}&nbsp;P.O,{{person_4_kara}}</td>
+                    <td>Pin</td>
+                    <td colspan="2">{{person_4_pin}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">4.	സംഘത്തിലെ അംഗ നമ്പർ</td>
+                    <!-- <td colspan="3" style="font-weight:bold;">{{mem_num_5_type}}&nbsp;{{mem_num_5}}</td> -->
+
+                    {% if mem_num_5_type == "C" %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_5_type}}&nbsp;{{mem_num_5}}</td>
+                    {% else %}
+                    <td colspan="4" style="font-weight:bold;">{{mem_num_5}}</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പേര്</td>
+                    <td style="font-weight:bold;">{{person_5_name}}</td>
+                    <td>Gender</td>
+                    <td colspan="2">{{person_5_gender}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">പിതാവിൻറെ /ഭർത്താവിൻറെ പേര്</td>
+                    <td colspan="4">{{person_5_father_husband}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align:right;">സ്ഥിരമേൽവിലാസം</td>
+                    <td colspan="4">{{person_5_house}}&nbsp;(H)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{person_5_post}}&nbsp;P.O,{{person_5_kara}}</td>
+                    <td>Pin</td>
+                    <td colspan="2">{{person_5_pin}}</td>
+                </tr>
+            </table>
+            <div style="font-size:smaller ;">
+            <p>ഇതിൽ പറഞ്ഞിരിക്കുന്ന വിവരങ്ങൾ സത്യമാണെന്നും MDS ഉപനിബന്ധനകളും സംഘത്തിൻറെ എല്ലാ നിബന്ധനകളും ഞാൻ/ഞങ്ങൾ അനുസരിച്ചുകൊള്ളാമെന്ന് ഇതിനാൽ പ്രതിജ്ഞ ചെയ്ത് കൊള്ളുന്നു.</p>
+            <p>സ്ഥലം: Ezhakkaranad <br> തിയതി ………../…………/………………</p>
+            </div>
+            <table class="center" style="font-size:small ;">
+                <tr style="line-height:35px ;">
+                    <td>1-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_1_name}}</td>
+                </tr>
+                <tr style="line-height:35px ;">
+                    <td>2-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_2_name}}</td>
+                </tr>
+                <tr style="line-height:35px ;">
+                    <td>3-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_3_name}}</td>
+                </tr>
+                <tr style="line-height:35px ;">
+                    <td>4-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_4_name}}</td>
+                </tr>
+                <tr style="line-height:35px ;">
+                    <td>5-)o  കക്ഷി  പേര്, ഒപ്പ്&nbsp;</td>
+                    <td style="width:400px;font-weight:bold;vertical-align:bottom !important;">&nbsp;{{person_5_name}}</td>
+                </tr>
+            </table>
+            <div style="font-size:smaller ;">
+            <p>സെക്രട്ടറിയുടെ അഭിപ്രായം:</p>
+            <p>കമ്മിറ്റി തീരുമാനം : </p>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;പ്രസിഡൻറ്&emsp;&emsp;&emsp;&emsp;സെക്രട്ടറി</p>
+            </div>
+        </div>
+        </div>
+    </body>
+     <script>
+        $(document).ready(function(){
+            //window.print();
+            createPDF();
+            setTimeout(function(){
+                localStorage.setItem('historyFlag','9');
+                history.back();
+            }, 2000);
+            
+            
+
+            function createPDF() {
+                var pdf = document.getElementById("contentDiv");
+                var opt = {
+                    margin: 1,
+                    filename: 'chitty-application-property.pdf',
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas:  { scale: 6,dpi: 300,letterRendering: true },
+                    jsPDF: { unit: 'cm', format: 'legal', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(pdf).save();
+            }
+        });
+    </script>
+</html>
