@@ -1,0 +1,1 @@
+* for maneed society "readonly" property is removed from total_amount field.Because auto download was not working.
