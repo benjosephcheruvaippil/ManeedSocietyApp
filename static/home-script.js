@@ -69,7 +69,7 @@ $(document).ready(function(){
     var historyFlag=localStorage.getItem('historyFlag');
     console.log("History Flag",historyFlag);
     if(historyFlag=="1"){
-      var applicationbutton = document.getElementById("application");
+      var applicationbutton = document.getElementById("applicationproperty");
       setTimeout(function(){
         applicationbutton.click();
         }, 1000);
@@ -117,11 +117,11 @@ $(document).ready(function(){
         }, 1000);
     }
 
-    if(historyFlag=="8"){
-      var note5button = document.getElementById("applicationproperty");
-      setTimeout(function(){
-        note5button.click();
-        }, 1000);
-    }
+    // if(historyFlag=="8"){
+    //   var note5button = document.getElementById("applicationproperty");
+    //   setTimeout(function(){
+    //     note5button.click();
+    //     }, 1000);
+    // }
   }
 });
