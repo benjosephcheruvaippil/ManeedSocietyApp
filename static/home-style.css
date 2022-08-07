@@ -9,7 +9,7 @@ body {font-family: Arial;}
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  background-color:inherit;
   float: left;
   border: none;
   outline: none;
@@ -17,6 +17,7 @@ body {font-family: Arial;}
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  font-weight: 600;
 }
 
 /* Change background color of buttons on hover */
@@ -70,3 +71,16 @@ input[type=submit] {
     cursor: pointer;
   }
 
+  .parent {
+    border: 1px solid black;
+    /* margin: -3rem;
+    padding: 2rem 2rem; */
+    text-align: center;
+  }
+  .child {
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* padding: 1rem 1rem; */
+    margin-left: 20px;
+    vertical-align: middle;
+  }

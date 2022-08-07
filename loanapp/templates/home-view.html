@@ -10,21 +10,15 @@
 <body>
 
 
-<div style="width:100;background-color:aliceblue;">
-  <div>
-    <span><h2>Maneed Cooperative Society</h2></span>
-  </div>
-
- <div align="right">
-  <span style="text-align: right;"><h2><a class="btn btn-primary" onclick='return RemoveLocalStorageItems()' href="/logout">Logout</a></h2></span>
- </div>
-
+<div class='parent' style="background-color:rgb(127, 190, 246) ;">
+  <div class='child' style="text-decoration:underline ;"><h2>Maneed Cooperative Society</h2></div>
+  <div class='child'><span style="text-align: right;"><h2><img width="40px" height="40px" src="/static/logout.png" onclick='return RemoveLocalStorageItems()' style="cursor:pointer ;"></h2></span></div>
 </div>
 <!-- <p>Click on the buttons inside the tabbed menu:</p> -->
 
-<div class="tab">
+<div class="tab" style="background-color: cadetblue;">
   <button class="tablinks" id="btnUpload" onclick="openCity(event, 'Upload')">Upload Member Data</button>
-  <button class="tablinks" onclick="openCity(event, 'ChittyDoc')">Chitty Document</button>
+  <button class="tablinks" onclick="openCity(event, 'ChittyDoc')">Generate Documents</button>
   <button class="tablinks" style="visibility:hidden ;" onclick="openCity(event, 'LoanDoc')">Loan Document</button>
 </div>
 
@@ -62,7 +56,7 @@
 </div>
 
 <div id="ChittyDoc" class="tabcontent">
-  <h3>Chitty Document - With Property</h3>
+  <h3>Chitty Document/FD Document</h3>
   <form action="{% url 'render-chitty-agreement' %}" method="post">
     {% csrf_token %}
 

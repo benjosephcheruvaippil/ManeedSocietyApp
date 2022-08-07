@@ -14,6 +14,7 @@ function openCity(evt, cityName) {
 
 function RemoveLocalStorageItems(){
   localStorage.removeItem('historyFlag');
+  window.location.href="/logout";
 }
 
 
