@@ -130,11 +130,9 @@
                     <td colspan="4" style="font-weight:bold;">(1) PROPERTY DETAILS</td>
                 </tr>
                 <tr>
-                    <td colspan="6">............)൦ കക്ഷി വക ...............വില്ലേജിൽപ്പെടുന്നതും .............SRO യിലെ ..............)൦ നമ്പർ ആധാര പ്രകാരം സിദ്ധിച്ചിട്ടുള്ളതുമായ താഴെ പട്ടിക വസ്തുക്കൾ</td>
+                    <td colspan="6">{{txtbx35}} )൦ കക്ഷി വക {{txtbx20}} വില്ലേജിൽപ്പെടുന്നതും {{txtbx18}} SRO യിലെ {{txtbx19}} )൦ നമ്പർ ആധാര പ്രകാരം സിദ്ധിച്ചിട്ടുള്ളതുമായ താഴെ പട്ടിക വസ്തുക്കൾ</td>
                 </tr>
                
-
-
                 <tr>
                     <td>1</td>
                     <td>ജില്ല</td>
@@ -170,7 +168,7 @@
 
 
                 <tr>
-                    <td colspan="6">.........വില്ലേജിൽ .........സർവ്വേനമ്പറിൽപ്പെട്ടതും മേൽ വിവരിക്കുന്നത് പ്രകാരമുള്ളതുമായ ......... വസ്തുവകകളും ചമയങ്ങളും.</td>
+                    <td colspan="6">{{txtbx20}} വില്ലേജിൽ {{txtbx21}} സർവ്വേനമ്പറിൽപ്പെട്ടതും മേൽ വിവരിക്കുന്നത് പ്രകാരമുള്ളതുമായ {{txtbx22}} ആർ വസ്തുവകകളും ചമയങ്ങളും.</td>
                 </tr>
                 <tr>
                     <td>15</td>
@@ -314,6 +312,10 @@
                     <td>Pin</td>
                     <td colspan="2">{{person_5_pin}}</td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5" style="font-weight:bold;">FIXED DEPOSIT DETAILS</td>                  
+                </tr>
             </table>
             <div style="font-size:smaller ;">
             <p>ഇതിൽ പറഞ്ഞിരിക്കുന്ന വിവരങ്ങൾ സത്യമാണെന്നും MDS ഉപനിബന്ധനകളും സംഘത്തിൻറെ എല്ലാ നിബന്ധനകളും ഞാൻ/ഞങ്ങൾ അനുസരിച്ചുകൊള്ളാമെന്ന് ഇതിനാൽ പ്രതിജ്ഞ ചെയ്ത് കൊള്ളുന്നു.</p>
@@ -364,8 +366,8 @@
             function createPDF() {
                 var pdf = document.getElementById("contentDiv");
                 var opt = {
-                    margin: 1,
-                    filename: 'chitty-application-property.pdf',
+                    margin: [0,1,1,1],//top,left,bottom,right
+                    filename: 'chitty-application-combined.pdf',
                     image: { type: 'jpeg', quality: 1 },
                     html2canvas:  { scale: 6,dpi: 300,letterRendering: true },
                     jsPDF: { unit: 'cm', format: 'legal', orientation: 'portrait' }
