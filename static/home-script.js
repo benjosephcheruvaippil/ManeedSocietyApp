@@ -32,11 +32,11 @@ $(document).ready(function(){
     $("#person4_class_type").val("A");
     $("#person5_class_type").val("A");
 
-    $("#person_1").val("1094");
-    $("#person_2").val("1");
-    $("#person_3").val("1078");
-    $("#person_4").val("1063");
-    $("#person_5").val("1040");
+    $("#person_1").val("1");
+    $("#person_2").val("2");
+    $("#person_3").val("3");
+    $("#person_4").val("4");
+    $("#person_5").val("5");
 
     $("#mds_no").val("MDS-001");
     $("#monthly_instalment_amount").val("4000");
