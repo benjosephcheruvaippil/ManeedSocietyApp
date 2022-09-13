@@ -20,9 +20,17 @@ function RemoveLocalStorageItems(){
 
 $(document).ready(function(){
 
-  $("#bond").click(function(){
+  $("#monthly_instalment_amount").keyup(function(){
     $("#total_amount").val(($("#monthly_instalment_amount").val())*($("#term").val()));
   });
+
+  $("#term").keyup(function(){
+    $("#total_amount").val(($("#monthly_instalment_amount").val())*($("#term").val()));
+  });
+
+  // $("#bond").click(function(){
+  //   $("#total_amount").val(($("#monthly_instalment_amount").val())*($("#term").val()));
+  // });
 
   $("#setvalues").click(function(){
     $("#documentType").val("1");
