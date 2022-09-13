@@ -42,22 +42,22 @@ $(document).ready(function(){
     $("#monthly_instalment_amount").val("4000");
     $("#term").val("5");
     //$("#total_amount").val("60000");
-    $("#chittal_no").val("CGJ-45");
+    $("#chittal_no").val("CHITTAL NO");
     $("#auction_instalment_no").val("9");
     $("#auction_date").val("12/12/2021");
     $("#less_called_amount").val("1000");
     // $("#sro").val("SQWER");
-    $("#land_document_no").val("LNH-09-T");
+    $("#land_document_no").val("LAND NO");
     $("#no_of_executants").val("3");
     $("#date_of_instalment").val("11/10/2021");
-    $("#property_owner_specify_no").val("OWNWER");
+    $("#property_owner_specify_no").val("13420");
     // $("#district").val("");
     // $("#sub_district").val("");
     // $("#taluk").val("");
     // $("#village").val("");
      $("#kara").val("Kodumboor");
-    $("#sy_no_and_sy_sub_division_no").val("qwe-1234");
-    $("#re_sy_no").val("errt");
+    $("#sy_no_and_sy_sub_division_no").val("SUB DIVISION NO");
+    $("#re_sy_no").val("RE SY NO");
     $("#area").val("12.8");
   });
 
@@ -67,6 +67,7 @@ $(document).ready(function(){
   });
 
   window.onpageshow=function(event){
+    
     var historyFlag=localStorage.getItem('historyFlag');
     console.log("History Flag",historyFlag);
     if(historyFlag=="1"){
